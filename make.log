@@ -1,0 +1,3185 @@
+[2018-05-08 14:28:17] __rvm_make
+__rvm_make () 
+{ 
+    \make "$@" || return $?
+}
+current path: /home/mds/.rvm/src/ruby-2.1.10
+GEM_HOME=/home/mds/.rvm/gems/ruby-2.2.10
+GEM_PATH=/home/mds/.rvm/gems/ruby-2.2.10:/home/mds/.rvm/gems/ruby-2.2.10@global
+PATH=/home/mds/.rvm/usr/bin:/home/mds/.rvm/gems/ruby-2.2.10/bin:/home/mds/.rvm/gems/ruby-2.2.10@global/bin:/home/mds/.rvm/rubies/ruby-2.2.10/bin:/home/mds/.rvm/bin:/home/mds/.rbenv/plugins/ruby-build/bin:/home/mds/.rbenv/shims:/home/mds/.rbenv/bin:/home/mds/.nvm/versions/node/v8.11.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+command(2): __rvm_make -j4
+++ make -j4
+	CC = gcc
+	LD = ld
+	LDSHARED = gcc -shared
+	CFLAGS = -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -std=iso9899:1999  -fPIC 
+	XCFLAGS = -D_FORTIFY_SOURCE=2 -fstack-protector -fno-strict-overflow -fvisibility=hidden -DRUBY_EXPORT
+	CPPFLAGS =   -I. -I.ext/include/x86_64-linux -I./include -I.
+	DLDFLAGS = -Wl,-soname,libruby.so.2.1  -fstack-protector  
+	SOLIBS = -lpthread -lgmp -ldl -lcrypt -lm  
+compiling main.c
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-16ubuntu3' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --with-as=/usr/bin/x86_64-linux-gnu-as --with-ld=/usr/bin/x86_64-linux-gnu-ld --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-16ubuntu3) 
+compiling dmydln.c
+compiling miniinit.c
+compiling miniprelude.c
+copying dummy probes.h
+compiling bignum.c
+compiling class.c
+compiling compar.c
+compiling complex.c
+In file included from bignum.c:12:0:
+bignum.c: In function ‘big_shift3’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bignum.c:4414:24: note: in expansion of macro ‘INT2FIX’
+                 return INT2FIX(-1);
+                        ^~~~~~~
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bignum.c:4421:30: note: in expansion of macro ‘INT2FIX’
+             return hibitsx ? INT2FIX(-1) : INT2FIX(0);
+                              ^~~~~~~
+bignum.c: In function ‘big_shift2’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bignum.c:4458:57: note: in expansion of macro ‘INT2FIX’
+             return RBIGNUM_POSITIVE_P(x) ? INT2FIX(0) : INT2FIX(-1);
+                                                         ^~~~~~~
+compiling dir.c
+bignum.c: In function ‘rb_integer_float_cmp’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bignum.c:5308:30: note: in expansion of macro ‘INT2FIX’
+         if (yd > 0.0) return INT2FIX(-1);
+                              ^~~~~~~
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bignum.c:5325:20: note: in expansion of macro ‘INT2FIX’
+             return INT2FIX(-1);
+                    ^~~~~~~
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bignum.c:5329:20: note: in expansion of macro ‘INT2FIX’
+             return INT2FIX(-1);
+                    ^~~~~~~
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bignum.c:5335:20: note: in expansion of macro ‘INT2FIX’
+             return INT2FIX(-1);
+                    ^~~~~~~
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bignum.c:5345:12: note: in expansion of macro ‘INT2FIX’
+     return INT2FIX(-1);
+            ^~~~~~~
+bignum.c: In function ‘rb_big_cmp’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bignum.c:5410:51: note: in expansion of macro ‘INT2FIX’
+     if (RBIGNUM_SIGN(x) < RBIGNUM_SIGN(y)) return INT2FIX(-1);
+                                                   ^~~~~~~
+bignum.c: In function ‘rb_big_neg’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bignum.c:5606:20: note: in expansion of macro ‘INT2FIX’
+     if (!n) return INT2FIX(-1);
+                    ^~~~~~~
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bignum.c:5617:20: note: in expansion of macro ‘INT2FIX’
+             return INT2FIX(-1);
+                    ^~~~~~~
+bignum.c: In function ‘bigor_int’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bignum.c:6538:25: note: in expansion of macro ‘INT2FIX’
+     if (y == -1) return INT2FIX(-1);
+                         ^~~~~~~
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bignum.c:6539:35: note: in expansion of macro ‘INT2FIX’
+     if (xn == 0) return hibitsx ? INT2FIX(-1) : LONG2FIX(y);
+                                   ^~~~~~~
+compiling dln_find.c
+compiling encoding.c
+encoding.c: In function ‘rb_enc_get_index’:
+encoding.c:765:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if (NIL_P(obj)) break;
+     ^
+encoding.c:766:7: note: here
+       case T_DATA:
+       ^~~~
+encoding.c: In function ‘enc_capable’:
+encoding.c:725:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if (is_data_encoding(obj)) return TRUE;
+     ^
+encoding.c:726:7: note: here
+       default:
+       ^~~~~~~
+compiling enum.c
+compiling enumerator.c
+compiling error.c
+compiling eval.c
+compiling load.c
+In file included from eval.c:14:0:
+eval_jump.c: In function ‘rb_exec_end_proc’:
+eval_intern.h:135:41: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+ #define TH_PUSH_TAG2() (_th->tag = &_tag, 0)
+                        ~~~~~~~~~~~~~~~~~^~~~
+eval_intern.h:139:25: note: in expansion of macro ‘TH_PUSH_TAG2’
+ #define TH_REPUSH_TAG() TH_PUSH_TAG2()
+                         ^~~~~~~~~~~~
+eval_jump.c:129:2: note: in expansion of macro ‘TH_REPUSH_TAG’
+  TH_REPUSH_TAG();
+  ^~~~~~~~~~~~~
+load.c: In function ‘search_required’:
+load.c:917:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if (ft) {
+     ^
+load.c:922:7: note: here
+       case 1:
+       ^~~~
+compiling proc.c
+compiling file.c
+compiling gc.c
+In file included from file.c:26:0:
+file.c: In function ‘rb_stat_cmp’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+file.c:421:51: note: in expansion of macro ‘INT2FIX’
+             if (ts1.tv_nsec < ts2.tv_nsec) return INT2FIX(-1);
+                                                   ^~~~~~~
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+file.c:424:45: note: in expansion of macro ‘INT2FIX’
+         if (ts1.tv_sec < ts2.tv_sec) return INT2FIX(-1);
+                                             ^~~~~~~
+file.c: In function ‘rb_stat_dev_major’:
+file.c:473:13: warning: In the GNU C Library, "major" is defined
+ by <sys/sysmacros.h>. For historical compatibility, it is
+ currently defined by <sys/types.h> as well, but we plan to
+ remove this soon. To use "major", include <sys/sysmacros.h>
+ directly. If you did not intend to use a system-defined macro
+ "major", you should undefine it after including <sys/types.h>.
+     return INT2NUM(major(get_stat(self)->st_dev));
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                                                                                                                                                  
+file.c: In function ‘rb_stat_dev_minor’:
+file.c:494:13: warning: In the GNU C Library, "minor" is defined
+ by <sys/sysmacros.h>. For historical compatibility, it is
+ currently defined by <sys/types.h> as well, but we plan to
+ remove this soon. To use "minor", include <sys/sysmacros.h>
+ directly. If you did not intend to use a system-defined macro
+ "minor", you should undefine it after including <sys/types.h>.
+     return INT2NUM(minor(get_stat(self)->st_dev));
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                                                                                                                                                  
+file.c: In function ‘rb_stat_rdev_major’:
+file.c:626:13: warning: In the GNU C Library, "major" is defined
+ by <sys/sysmacros.h>. For historical compatibility, it is
+ currently defined by <sys/types.h> as well, but we plan to
+ remove this soon. To use "major", include <sys/sysmacros.h>
+ directly. If you did not intend to use a system-defined macro
+ "major", you should undefine it after including <sys/types.h>.
+     return DEVT2NUM(major(get_stat(self)->st_rdev));
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                                                                                                                                                
+file.c: In function ‘rb_stat_rdev_minor’:
+file.c:647:13: warning: In the GNU C Library, "minor" is defined
+ by <sys/sysmacros.h>. For historical compatibility, it is
+ currently defined by <sys/types.h> as well, but we plan to
+ remove this soon. To use "minor", include <sys/sysmacros.h>
+ directly. If you did not intend to use a system-defined macro
+ "minor", you should undefine it after including <sys/types.h>.
+     return DEVT2NUM(minor(get_stat(self)->st_rdev));
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~                                                                                                                                                                                                                                                                                                                                
+gc.c: In function ‘internal_object_p’:
+gc.c:1799:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+      if (FL_TEST(p, FL_SINGLETON))
+         ^
+gc.c:1801:4: note: here
+    default:
+    ^~~~~~~
+compiling hash.c
+hash.c: In function ‘rb_hash_s_create’:
+hash.c:569:11: warning: this statement may fall through [-Wimplicit-fallthrough=]
+       val = RARRAY_AREF(v, 1);
+hash.c:570:5: note: here
+     case 1:
+     ^~~~
+compiling inits.c
+compiling io.c
+io.c: In function ‘rb_io_s_popen’:
+io.c:6180:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  pmode = argv[1];
+  ~~~~~~^~~~~~~~~
+io.c:6181:7: note: here
+       case 1:
+       ^~~~
+compiling marshal.c
+marshal.c: In function ‘r_object0’:
+marshal.c:1665:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (bs & 1) --dst;
+       ^
+marshal.c:1666:9: note: here
+         default: bs = 0; break;
+         ^~~~~~~
+marshal.c: In function ‘load_mantissa’:
+marshal.c:328:19: warning: this statement may fall through [-Wimplicit-fallthrough=]
+        default: m = *buf++ & 0xff;
+                 ~~^~~~~~~~~~~~~~~
+marshal.c:330:8: note: here
+        case 3: m = (m << 8) | (*buf++ & 0xff);
+        ^~~~
+marshal.c:330:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+        case 3: m = (m << 8) | (*buf++ & 0xff);
+                ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+marshal.c:333:8: note: here
+        case 2: m = (m << 8) | (*buf++ & 0xff);
+        ^~~~
+marshal.c:333:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+        case 2: m = (m << 8) | (*buf++ & 0xff);
+                ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+marshal.c:336:8: note: here
+        case 1: m = (m << 8) | (*buf++ & 0xff);
+        ^~~~
+compiling math.c
+compiling node.c
+compiling numeric.c
+In file included from numeric.c:12:0:
+numeric.c: In function ‘rb_dbl_cmp’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+numeric.c:1138:23: note: in expansion of macro ‘INT2FIX’
+     if (a < b) return INT2FIX(-1);
+                       ^~~~~~~
+numeric.c: In function ‘flo_cmp’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+numeric.c:1180:13: note: in expansion of macro ‘INT2FIX’
+      return INT2FIX(-1);
+             ^~~~~~~
+numeric.c: In function ‘fix_pow’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+numeric.c:3086:10: note: in expansion of macro ‘INT2FIX’
+   return INT2FIX(-1);
+          ^~~~~~~
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+numeric.c:3103:18: note: in expansion of macro ‘INT2FIX’
+      else return INT2FIX(-1);
+                  ^~~~~~~
+numeric.c: In function ‘fix_cmp’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+numeric.c:3173:9: note: in expansion of macro ‘INT2FIX’
+  return INT2FIX(-1);
+         ^~~~~~~
+numeric.c: In function ‘fix_lt’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+numeric.c:3256:46: note: in expansion of macro ‘INT2FIX’
+         return rb_integer_float_cmp(x, y) == INT2FIX(-1) ? Qtrue : Qfalse;
+                                              ^~~~~~~
+numeric.c: In function ‘fix_le’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+numeric.c:3283:16: note: in expansion of macro ‘INT2FIX’
+  return rel == INT2FIX(-1) || rel == INT2FIX(0) ? Qtrue : Qfalse;
+                ^~~~~~~
+numeric.c: In function ‘fix_rshift’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+numeric.c:3455:22: note: in expansion of macro ‘INT2FIX’
+  if (val < 0) return INT2FIX(-1);
+                      ^~~~~~~
+numeric.c: In function ‘int_downto_size’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+numeric.c:3650:68: note: in expansion of macro ‘INT2FIX’
+     return ruby_num_interval_step_size(from, RARRAY_AREF(args, 0), INT2FIX(-1), FALSE);
+                                                                    ^~~~~~~
+numeric.c: In function ‘Init_Numeric’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+numeric.c:4023:43: note: in expansion of macro ‘INT2FIX’
+     rb_define_const(rb_cFloat, "MIN_EXP", INT2FIX(DBL_MIN_EXP));
+                                           ^~~~~~~
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+numeric.c:4037:46: note: in expansion of macro ‘INT2FIX’
+     rb_define_const(rb_cFloat, "MIN_10_EXP", INT2FIX(DBL_MIN_10_EXP));
+                                              ^~~~~~~
+compiling object.c
+In file included from object.c:14:0:
+object.c: In function ‘rb_mod_cmp’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+object.c:1663:9: note: in expansion of macro ‘INT2FIX’
+  return INT2FIX(-1);
+         ^~~~~~~
+object.c: In function ‘rb_f_integer’:
+object.c:2794:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  base = NUM2INT(argv[1]);
+object.c:2795:7: note: here
+       case 1:
+       ^~~~
+compiling pack.c
+compiling parse.c
+compiling process.c
+In file included from parse.y:25:0:
+parse.y: In function ‘ruby_yyparse’:
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:1360:4: note: in expansion of macro ‘nd_set_line’
+    nd_set_line($$, $<num>2);
+    ^~~~~~~~~~~
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:1372:4: note: in expansion of macro ‘nd_set_line’
+    nd_set_line($$, tokline);
+    ^~~~~~~~~~~
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:2602:5: note: in expansion of macro ‘nd_set_line’
+     nd_set_line($3, $<num>2);
+     ^~~~~~~~~~~
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:2605:4: note: in expansion of macro ‘nd_set_line’
+    nd_set_line($$, $<num>2);
+    ^~~~~~~~~~~
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:2906:4: note: in expansion of macro ‘nd_set_line’
+    nd_set_line($$, $<num>4);
+    ^~~~~~~~~~~
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:2951:4: note: in expansion of macro ‘nd_set_line’
+    nd_set_line($$, $<num>3);
+    ^~~~~~~~~~~
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:2972:4: note: in expansion of macro ‘nd_set_line’
+    nd_set_line($$, $<num>1);
+    ^~~~~~~~~~~
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:2994:4: note: in expansion of macro ‘nd_set_line’
+    nd_set_line($$, $<num>1);
+    ^~~~~~~~~~~
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:3481:4: note: in expansion of macro ‘nd_set_line’
+    nd_set_line($$, $<num>4);
+    ^~~~~~~~~~~
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:3526:4: note: in expansion of macro ‘nd_set_line’
+    nd_set_line($$, $<num>2);
+    ^~~~~~~~~~~
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:3604:4: note: in expansion of macro ‘nd_set_line’
+    nd_set_line($$, $<num>4);
+    ^~~~~~~~~~~
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:3620:4: note: in expansion of macro ‘nd_set_line’
+    nd_set_line($$, $<num>4);
+    ^~~~~~~~~~~
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:3644:4: note: in expansion of macro ‘nd_set_line’
+    nd_set_line($$, $<num>3);
+    ^~~~~~~~~~~
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:3661:4: note: in expansion of macro ‘nd_set_line’
+    nd_set_line($$, $<num>3);
+    ^~~~~~~~~~~
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:3711:4: note: in expansion of macro ‘nd_set_line’
+    nd_set_line($$, $<num>2);
+    ^~~~~~~~~~~
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:3730:4: note: in expansion of macro ‘nd_set_line’
+    nd_set_line($$, $<num>2);
+    ^~~~~~~~~~~
+parse.y: In function ‘parser_heredoc_identifier’:
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:6388:5: note: in expansion of macro ‘nd_set_line’
+     nd_set_line(lex_strterm, ruby_sourceline);
+     ^~~~~~~~~~~
+parse.y: In function ‘node_newnode’:
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:8304:5: note: in expansion of macro ‘nd_set_line’
+     nd_set_line(n, ruby_sourceline);
+     ^~~~~~~~~~~
+parse.y: In function ‘fixpos’:
+node.h:290:43: warning: left shift of negative value [-Wshift-negative-value]
+     RNODE(n)->flags=((RNODE(n)->flags&~(-1<<NODE_LSHIFT))|(((l)&NODE_LMASK)<<NODE_LSHIFT))
+                                           ^
+parse.y:8336:5: note: in expansion of macro ‘nd_set_line’
+     nd_set_line(node, nd_line(orig));
+     ^~~~~~~~~~~
+parse.y: In function ‘ruby_yyparse’:
+parse.y:3909:13: warning: this statement may fall through [-Wimplicit-fallthrough=]
+        node = NEW_NODE(NODE_DSTR, STR_NEW0(), 1, NEW_LIST(node));
+parse.y:3910:6: note: here
+      case NODE_DSTR:
+      ^~~~
+parse.y:311:22: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ #define yyerror(msg) parser_yyerror(parser, (msg))
+                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+parse.y:4898:5: note: in expansion of macro ‘yyerror’
+     yyerror("can't define singleton method for literals");
+     ^~~~~~~
+parse.y:4899:10: note: here
+          default:
+          ^~~~~~~
+In file included from process.c:14:0:
+process.c: In function ‘check_exec_fds_1’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+process.c:1890:46: note: in expansion of macro ‘INT2FIX’
+                 rb_hash_aset(h, INT2FIX(fd), INT2FIX(-1));
+                                              ^~~~~~~
+parse.y: In function ‘parser_yylex’:
+parse.y:7078:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if ((c = nextc()) != '.') {
+        ^
+parse.y:7084:8: note: here
+        default:
+        ^~~~~~~
+parse.y:7086:16: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   lex_nextline = lex_lastline;
+parse.y:7087:8: note: here
+        case -1:  /* EOF no decrement*/
+        ^~~~
+parse.y:8082:10: warning: this statement may fall through [-Wimplicit-fallthrough=]
+      if (!parser_is_identchar()) {
+          ^
+parse.y:8087:4: note: here
+    case '0':
+    ^~~~
+parse.y:7745:12: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  paren_nest--;
+parse.y:7746:7: note: here
+       case '}':
+       ^~~~
+parse.y: In function ‘parser_here_document’:
+parse.y:6547:23: warning: this statement may fall through [-Wimplicit-fallthrough=]
+       if (--pend == p || pend[-1] != '\r') {
+           ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+parse.y:6551:5: note: here
+     case '\r':
+     ^~~~
+parse.y: In function ‘parser_read_escape’:
+parse.y:5875:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ((c = nextc()) != '-') {
+     ^
+parse.y:5879:7: note: here
+       case 'c':
+       ^~~~
+parse.y: In function ‘is_static_content’:
+parse.y:9242:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if (!(node = node->nd_head)) break;
+     ^
+parse.y:9243:7: note: here
+       case NODE_ARRAY:
+       ^~~~
+compiling random.c
+In file included from random.c:1246:0:
+siphash.c: In function ‘ruby_sip_hash24’:
+siphash.c:429:26: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ #define OR_BYTE(n) (last |= ((uint64_t) end[n]) << ((n) * 8))
+                    ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+siphash.c:443:6: note: in expansion of macro ‘OR_BYTE’
+      OR_BYTE(6);
+      ^~~~~~~
+siphash.c:444:2: note: here
+  case 6:
+  ^~~~
+siphash.c:429:26: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ #define OR_BYTE(n) (last |= ((uint64_t) end[n]) << ((n) * 8))
+                    ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+siphash.c:445:6: note: in expansion of macro ‘OR_BYTE’
+      OR_BYTE(5);
+      ^~~~~~~
+siphash.c:446:2: note: here
+  case 5:
+  ^~~~
+siphash.c:429:26: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ #define OR_BYTE(n) (last |= ((uint64_t) end[n]) << ((n) * 8))
+                    ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+siphash.c:447:6: note: in expansion of macro ‘OR_BYTE’
+      OR_BYTE(4);
+      ^~~~~~~
+siphash.c:448:2: note: here
+  case 4:
+  ^~~~
+siphash.c:429:26: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ #define OR_BYTE(n) (last |= ((uint64_t) end[n]) << ((n) * 8))
+                    ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+siphash.c:460:6: note: in expansion of macro ‘OR_BYTE’
+      OR_BYTE(2);
+      ^~~~~~~
+siphash.c:461:2: note: here
+  case 2:
+  ^~~~
+siphash.c:429:26: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ #define OR_BYTE(n) (last |= ((uint64_t) end[n]) << ((n) * 8))
+                    ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+siphash.c:462:6: note: in expansion of macro ‘OR_BYTE’
+      OR_BYTE(1);
+      ^~~~~~~
+siphash.c:463:2: note: here
+  case 1:
+  ^~~~
+random.c: In function ‘rand_range’:
+random.c:1037:21: warning: this statement may fall through [-Wimplicit-fallthrough=]
+       case T_FLOAT: {
+                     ^
+random.c:1043:7: note: here
+       default:
+       ^~~~~~~
+random.c: In function ‘random_load’:
+random.c:633:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  seed = ary[2];
+  ~~~~~^~~~~~~~
+random.c:634:7: note: here
+       case 2:
+       ^~~~
+random.c:635:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  left = ary[1];
+  ~~~~~^~~~~~~~
+random.c:636:7: note: here
+       case 1:
+       ^~~~
+compiling range.c
+compiling rational.c
+In file included from ./include/ruby.h:33:0,
+                 from rational.c:8:
+rational.c: In function ‘f_minus_one_p’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+rational.c:233:40: note: in expansion of macro ‘INT2FIX’
+     return rb_funcall(x, id_eqeq_p, 1, INT2FIX(-1));
+                                        ^~~~~~~
+compiling re.c
+re.c: In function ‘unescape_nonascii’:
+re.c:2256:17: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                 {
+                 ^
+re.c:2267:15: note: here
+               case '0': /* \0, \0O, \0OO */
+               ^~~~
+re.c: In function ‘read_escaped_byte’:
+re.c:2029:22: warning: this statement may fall through [-Wimplicit-fallthrough=]
+         if (p == end || *p++ != '-') {
+             ~~~~~~~~~^~~~~~~~~~~~~~
+re.c:2033:7: note: here
+       case 'c': /* \cX, \c\M-X */
+       ^~~~
+compiling regcomp.c
+compiling regenc.c
+compiling regerror.c
+compiling regexec.c
+compiling regparse.c
+regparse.c: In function ‘parse_enclose’:
+regparse.c:5051:10: warning: this statement may fall through [-Wimplicit-fallthrough=]
+       if (IS_SYNTAX_OP2(env->syntax, ONIG_SYN_OP2_OPTION_PERL)) {
+          ^
+regparse.c:5079:5: note: here
+     case '-': case 'i': case 'm': case 's': case 'x':
+     ^~~~
+compiling regsyntax.c
+compiling ruby.c
+ruby.c: In function ‘proc_options’:
+ruby.c:807:20: warning: this statement may fall through [-Wimplicit-fallthrough=]
+      opt->do_print = TRUE;
+ruby.c:809:4: note: here
+    case 'n':
+    ^~~~
+ruby.c:833:19: warning: this statement may fall through [-Wimplicit-fallthrough=]
+      opt->verbose = 1;
+      ~~~~~~~~~~~~~^~~
+ruby.c:834:4: note: here
+    case 'w':
+    ^~~~
+ruby.c:1147:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+      if (!s[1])
+         ^
+ruby.c:1150:4: note: here
+    default:
+    ^~~~~~~
+compiling safe.c
+compiling signal.c
+compiling sprintf.c
+compiling st.c
+sprintf.c: In function ‘rb_str_format’:
+sprintf.c:619:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+      p--;
+      ~^~
+sprintf.c:620:4: note: here
+    case '%':
+    ^~~~
+In file included from sprintf.c:1126:0:
+vsnprintf.c: In function ‘BSD_vfprintf’:
+vsnprintf.c:872:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (prec != 0)
+       ^
+vsnprintf.c:874:3: note: here
+   case 'g':
+   ^~~~
+st.c: In function ‘st_hash’:
+st.c:1537:4: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  t |= data_at(n) << CHAR_BIT*(n)
+  ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+st.c:1439:25: note: in expansion of macro ‘UNALIGNED_ADD’
+ #define UNALIGNED_ADD_8 UNALIGNED_ADD(6); UNALIGNED_ADD(5); UNALIGNED_ADD(4); UNALIGNED_ADD(3); UNALIGNED_ADD_4
+                         ^~~~~~~~~~~~~
+st.c:1445:27: note: in expansion of macro ‘UNALIGNED_ADD_8’
+ #define UNALIGNED_ADD_ALL UNALIGNED_ADD_8
+                           ^~~~~~~~~~~~~~~
+st.c:1539:2: note: in expansion of macro ‘UNALIGNED_ADD_ALL’
+  UNALIGNED_ADD_ALL;
+  ^~~~~~~~~~~~~~~~~
+st.c:1536:27: note: here
+ # define UNALIGNED_ADD(n) case (n) + 1: \
+                           ^
+st.c:1439:43: note: in expansion of macro ‘UNALIGNED_ADD’
+ #define UNALIGNED_ADD_8 UNALIGNED_ADD(6); UNALIGNED_ADD(5); UNALIGNED_ADD(4); UNALIGNED_ADD(3); UNALIGNED_ADD_4
+                                           ^~~~~~~~~~~~~
+st.c:1445:27: note: in expansion of macro ‘UNALIGNED_ADD_8’
+ #define UNALIGNED_ADD_ALL UNALIGNED_ADD_8
+                           ^~~~~~~~~~~~~~~
+st.c:1539:2: note: in expansion of macro ‘UNALIGNED_ADD_ALL’
+  UNALIGNED_ADD_ALL;
+  ^~~~~~~~~~~~~~~~~
+st.c:1537:4: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  t |= data_at(n) << CHAR_BIT*(n)
+  ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+st.c:1439:43: note: in expansion of macro ‘UNALIGNED_ADD’
+ #define UNALIGNED_ADD_8 UNALIGNED_ADD(6); UNALIGNED_ADD(5); UNALIGNED_ADD(4); UNALIGNED_ADD(3); UNALIGNED_ADD_4
+                                           ^~~~~~~~~~~~~
+st.c:1445:27: note: in expansion of macro ‘UNALIGNED_ADD_8’
+ #define UNALIGNED_ADD_ALL UNALIGNED_ADD_8
+                           ^~~~~~~~~~~~~~~
+st.c:1539:2: note: in expansion of macro ‘UNALIGNED_ADD_ALL’
+  UNALIGNED_ADD_ALL;
+  ^~~~~~~~~~~~~~~~~
+st.c:1536:27: note: here
+ # define UNALIGNED_ADD(n) case (n) + 1: \
+                           ^
+st.c:1439:61: note: in expansion of macro ‘UNALIGNED_ADD’
+ #define UNALIGNED_ADD_8 UNALIGNED_ADD(6); UNALIGNED_ADD(5); UNALIGNED_ADD(4); UNALIGNED_ADD(3); UNALIGNED_ADD_4
+                                                             ^~~~~~~~~~~~~
+st.c:1445:27: note: in expansion of macro ‘UNALIGNED_ADD_8’
+ #define UNALIGNED_ADD_ALL UNALIGNED_ADD_8
+                           ^~~~~~~~~~~~~~~
+st.c:1539:2: note: in expansion of macro ‘UNALIGNED_ADD_ALL’
+  UNALIGNED_ADD_ALL;
+  ^~~~~~~~~~~~~~~~~
+st.c:1537:4: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  t |= data_at(n) << CHAR_BIT*(n)
+  ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+st.c:1439:61: note: in expansion of macro ‘UNALIGNED_ADD’
+ #define UNALIGNED_ADD_8 UNALIGNED_ADD(6); UNALIGNED_ADD(5); UNALIGNED_ADD(4); UNALIGNED_ADD(3); UNALIGNED_ADD_4
+                                                             ^~~~~~~~~~~~~
+st.c:1445:27: note: in expansion of macro ‘UNALIGNED_ADD_8’
+ #define UNALIGNED_ADD_ALL UNALIGNED_ADD_8
+                           ^~~~~~~~~~~~~~~
+st.c:1539:2: note: in expansion of macro ‘UNALIGNED_ADD_ALL’
+  UNALIGNED_ADD_ALL;
+  ^~~~~~~~~~~~~~~~~
+st.c:1536:27: note: here
+ # define UNALIGNED_ADD(n) case (n) + 1: \
+                           ^
+st.c:1439:79: note: in expansion of macro ‘UNALIGNED_ADD’
+ #define UNALIGNED_ADD_8 UNALIGNED_ADD(6); UNALIGNED_ADD(5); UNALIGNED_ADD(4); UNALIGNED_ADD(3); UNALIGNED_ADD_4
+                                                                               ^~~~~~~~~~~~~
+st.c:1445:27: note: in expansion of macro ‘UNALIGNED_ADD_8’
+ #define UNALIGNED_ADD_ALL UNALIGNED_ADD_8
+                           ^~~~~~~~~~~~~~~
+st.c:1539:2: note: in expansion of macro ‘UNALIGNED_ADD_ALL’
+  UNALIGNED_ADD_ALL;
+  ^~~~~~~~~~~~~~~~~
+st.c:1537:4: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  t |= data_at(n) << CHAR_BIT*(n)
+  ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+st.c:1439:79: note: in expansion of macro ‘UNALIGNED_ADD’
+ #define UNALIGNED_ADD_8 UNALIGNED_ADD(6); UNALIGNED_ADD(5); UNALIGNED_ADD(4); UNALIGNED_ADD(3); UNALIGNED_ADD_4
+                                                                               ^~~~~~~~~~~~~
+st.c:1445:27: note: in expansion of macro ‘UNALIGNED_ADD_8’
+ #define UNALIGNED_ADD_ALL UNALIGNED_ADD_8
+                           ^~~~~~~~~~~~~~~
+st.c:1539:2: note: in expansion of macro ‘UNALIGNED_ADD_ALL’
+  UNALIGNED_ADD_ALL;
+  ^~~~~~~~~~~~~~~~~
+st.c:1536:27: note: here
+ # define UNALIGNED_ADD(n) case (n) + 1: \
+                           ^
+st.c:1437:25: note: in expansion of macro ‘UNALIGNED_ADD’
+ #define UNALIGNED_ADD_4 UNALIGNED_ADD(2); UNALIGNED_ADD(1); UNALIGNED_ADD(0)
+                         ^~~~~~~~~~~~~
+st.c:1439:97: note: in expansion of macro ‘UNALIGNED_ADD_4’
+ #define UNALIGNED_ADD_8 UNALIGNED_ADD(6); UNALIGNED_ADD(5); UNALIGNED_ADD(4); UNALIGNED_ADD(3); UNALIGNED_ADD_4
+                                                                                                 ^~~~~~~~~~~~~~~
+st.c:1445:27: note: in expansion of macro ‘UNALIGNED_ADD_8’
+ #define UNALIGNED_ADD_ALL UNALIGNED_ADD_8
+                           ^~~~~~~~~~~~~~~
+st.c:1539:2: note: in expansion of macro ‘UNALIGNED_ADD_ALL’
+  UNALIGNED_ADD_ALL;
+  ^~~~~~~~~~~~~~~~~
+st.c:1537:4: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  t |= data_at(n) << CHAR_BIT*(n)
+  ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+st.c:1437:25: note: in expansion of macro ‘UNALIGNED_ADD’
+ #define UNALIGNED_ADD_4 UNALIGNED_ADD(2); UNALIGNED_ADD(1); UNALIGNED_ADD(0)
+                         ^~~~~~~~~~~~~
+st.c:1439:97: note: in expansion of macro ‘UNALIGNED_ADD_4’
+ #define UNALIGNED_ADD_8 UNALIGNED_ADD(6); UNALIGNED_ADD(5); UNALIGNED_ADD(4); UNALIGNED_ADD(3); UNALIGNED_ADD_4
+                                                                                                 ^~~~~~~~~~~~~~~
+st.c:1445:27: note: in expansion of macro ‘UNALIGNED_ADD_8’
+ #define UNALIGNED_ADD_ALL UNALIGNED_ADD_8
+                           ^~~~~~~~~~~~~~~
+st.c:1539:2: note: in expansion of macro ‘UNALIGNED_ADD_ALL’
+  UNALIGNED_ADD_ALL;
+  ^~~~~~~~~~~~~~~~~
+st.c:1536:27: note: here
+ # define UNALIGNED_ADD(n) case (n) + 1: \
+                           ^
+st.c:1437:43: note: in expansion of macro ‘UNALIGNED_ADD’
+ #define UNALIGNED_ADD_4 UNALIGNED_ADD(2); UNALIGNED_ADD(1); UNALIGNED_ADD(0)
+                                           ^~~~~~~~~~~~~
+st.c:1439:97: note: in expansion of macro ‘UNALIGNED_ADD_4’
+ #define UNALIGNED_ADD_8 UNALIGNED_ADD(6); UNALIGNED_ADD(5); UNALIGNED_ADD(4); UNALIGNED_ADD(3); UNALIGNED_ADD_4
+                                                                                                 ^~~~~~~~~~~~~~~
+st.c:1445:27: note: in expansion of macro ‘UNALIGNED_ADD_8’
+ #define UNALIGNED_ADD_ALL UNALIGNED_ADD_8
+                           ^~~~~~~~~~~~~~~
+st.c:1539:2: note: in expansion of macro ‘UNALIGNED_ADD_ALL’
+  UNALIGNED_ADD_ALL;
+  ^~~~~~~~~~~~~~~~~
+st.c:1537:4: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  t |= data_at(n) << CHAR_BIT*(n)
+  ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+st.c:1437:43: note: in expansion of macro ‘UNALIGNED_ADD’
+ #define UNALIGNED_ADD_4 UNALIGNED_ADD(2); UNALIGNED_ADD(1); UNALIGNED_ADD(0)
+                                           ^~~~~~~~~~~~~
+st.c:1439:97: note: in expansion of macro ‘UNALIGNED_ADD_4’
+ #define UNALIGNED_ADD_8 UNALIGNED_ADD(6); UNALIGNED_ADD(5); UNALIGNED_ADD(4); UNALIGNED_ADD(3); UNALIGNED_ADD_4
+                                                                                                 ^~~~~~~~~~~~~~~
+st.c:1445:27: note: in expansion of macro ‘UNALIGNED_ADD_8’
+ #define UNALIGNED_ADD_ALL UNALIGNED_ADD_8
+                           ^~~~~~~~~~~~~~~
+st.c:1539:2: note: in expansion of macro ‘UNALIGNED_ADD_ALL’
+  UNALIGNED_ADD_ALL;
+  ^~~~~~~~~~~~~~~~~
+st.c:1536:27: note: here
+ # define UNALIGNED_ADD(n) case (n) + 1: \
+                           ^
+st.c:1437:61: note: in expansion of macro ‘UNALIGNED_ADD’
+ #define UNALIGNED_ADD_4 UNALIGNED_ADD(2); UNALIGNED_ADD(1); UNALIGNED_ADD(0)
+                                                             ^~~~~~~~~~~~~
+st.c:1439:97: note: in expansion of macro ‘UNALIGNED_ADD_4’
+ #define UNALIGNED_ADD_8 UNALIGNED_ADD(6); UNALIGNED_ADD(5); UNALIGNED_ADD(4); UNALIGNED_ADD(3); UNALIGNED_ADD_4
+                                                                                                 ^~~~~~~~~~~~~~~
+st.c:1445:27: note: in expansion of macro ‘UNALIGNED_ADD_8’
+ #define UNALIGNED_ADD_ALL UNALIGNED_ADD_8
+                           ^~~~~~~~~~~~~~~
+st.c:1539:2: note: in expansion of macro ‘UNALIGNED_ADD_ALL’
+  UNALIGNED_ADD_ALL;
+  ^~~~~~~~~~~~~~~~~
+compiling strftime.c
+strftime.c: In function ‘rb_strftime_with_timespec’:
+strftime.c:780:12: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    padding = '0';
+    ~~~~~~~~^~~~~
+strftime.c:781:3: note: here
+   case '1':  case '2': case '3': case '4':
+   ^~~~
+compiling string.c
+In file included from string.c:14:0:
+string.c: In function ‘rb_str_casecmp’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+string.c:2681:12: note: in expansion of macro ‘INT2FIX’
+     return INT2FIX(-1);
+            ^~~~~~~
+compiling struct.c
+compiling time.c
+time.c: In function ‘timelocalw’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+time.c:67:27: note: in definition of macro ‘lt’
+ #define lt(x,y) (cmp((x),(y)) < 0)
+                           ^
+./include/ruby/ruby.h:1285:21: note: in expansion of macro ‘INT2FIX’
+ # define INT2NUM(v) INT2FIX((int)(v))
+                     ^~~~~~~
+time.c:1539:19: note: in expansion of macro ‘INT2NUM’
+         if (lt(v, INT2NUM(INT_MIN)) || lt(INT2NUM(INT_MAX), v))
+                   ^~~~~~~
+time.c: In function ‘validate_utc_offset’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+time.c:69:27: note: in definition of macro ‘le’
+ #define le(x,y) (cmp((x),(y)) <= 0)
+                           ^
+time.c:2598:24: note: in expansion of macro ‘INT2FIX’
+     if (le(utc_offset, INT2FIX(-86400)) || ge(utc_offset, INT2FIX(86400)))
+                        ^~~~~~~
+In file included from time.c:12:0:
+time.c: In function ‘time_cmp’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+time.c:3335:12: note: in expansion of macro ‘INT2FIX’
+     return INT2FIX(-1);
+            ^~~~~~~
+time.c: In function ‘utc_offset_arg’:
+time.c:2089:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+      n += (s[7] * 10 + s[8] - '0' * 11);
+      ~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+time.c:2090:4: note: here
+    case 6:
+    ^~~~
+compiling transcode.c
+compiling util.c
+util.c: In function ‘ruby_strtod’:
+util.c:1978:18: warning: this statement may fall through [-Wimplicit-fallthrough=]
+             sign = 1;
+             ~~~~~^~~
+util.c:1980:11: note: here
+           case '+':
+           ^~~~
+util.c:2142:19: warning: this statement may fall through [-Wimplicit-fallthrough=]
+             esign = 1;
+             ~~~~~~^~~
+util.c:2143:11: note: here
+           case '+':
+           ^~~~
+util.c: In function ‘ruby_dtoa’:
+util.c:3317:19: warning: this statement may fall through [-Wimplicit-fallthrough=]
+         leftright = 0;
+         ~~~~~~~~~~^~~
+util.c:3319:7: note: here
+       case 4:
+       ^~~~
+util.c:3325:19: warning: this statement may fall through [-Wimplicit-fallthrough=]
+         leftright = 0;
+         ~~~~~~~~~~^~~
+util.c:3327:7: note: here
+       case 5:
+       ^~~~
+compiling variable.c
+compiling version.c
+compiling compile.c
+compile.c: In function ‘iseq_compile_each’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+compile.c:190:62: note: in definition of macro ‘ADD_INSN1’
+            new_insn_body(iseq, (line), BIN(insn), 1, (VALUE)(op1)))
+                                                              ^~~
+compile.c:5399:39: note: in expansion of macro ‘INT2FIX’
+       ADD_INSN1(ret, line, putobject, INT2FIX(-1));
+                                       ^~~~~~~
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+compile.c:190:62: note: in definition of macro ‘ADD_INSN1’
+            new_insn_body(iseq, (line), BIN(insn), 1, (VALUE)(op1)))
+                                                              ^~~
+compile.c:5407:35: note: in expansion of macro ‘INT2FIX’
+   ADD_INSN1(ret, line, putobject, INT2FIX(-1));
+                                   ^~~~~~~
+compile.c:4089:11: warning: this statement may fall through [-Wimplicit-fallthrough=]
+      boff = 1;
+      ~~~~~^~~
+compile.c:4090:4: note: here
+    default:
+    ^~~~~~~
+compile.c:4507:11: warning: this statement may fall through [-Wimplicit-fallthrough=]
+      flag |= VM_CALL_VCALL;
+compile.c:4509:4: note: here
+    case NODE_FCALL:
+    ^~~~
+compile.c:4391:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if (node->nd_recv && nd_type(node->nd_recv) == NODE_STR &&
+     ^
+compile.c:4402:7: note: here
+       case NODE_FCALL:
+       ^~~~
+compile.c: In function ‘defined_expr0’:
+compile.c:2957:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+      if (node->nd_recv == (NODE *)1) break;
+         ^
+compile.c:2958:4: note: here
+    case NODE_CALL:
+    ^~~~
+compile.c:2874:23: warning: this statement may fall through [-Wimplicit-fallthrough=]
+       case NODE_ARRAY:{
+                       ^
+compile.c:2886:7: note: here
+       case NODE_STR:
+       ^~~~
+string.c: In function ‘rb_str_chars’:
+string.c:6728:3: warning: ‘ary’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rb_ary_push(ary, substr);
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from string.c:17:0:
+string.c:6686:29: note: ‘ary’ was declared here
+     VALUE UNINITIALIZED_VAR(ary);
+                             ^
+vm_core.h:117:30: note: in definition of macro ‘UNINITIALIZED_VAR’
+ #define UNINITIALIZED_VAR(x) x __attribute__((unused))
+                              ^
+compiling debug.c
+compiling iseq.c
+compiling vm.c
+In file included from vm_core.h:25:0,
+                 from eval_intern.h:5,
+                 from iseq.c:14:
+iseq.c: In function ‘iseq_load’:
+iseq.c:540:54: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+  cached_map = ATOMIC_PTR_CAS(type_map_cache, (struct st_table *)0, type_map);
+                                                      ^
+ruby_atomic.h:13:36: note: in definition of macro ‘ATOMIC_CAS’
+ ({ __typeof__(oldval) oldvaldup = (oldval); /* oldval should not be modified */ \
+                                    ^~~~~~
+ruby_atomic.h:166:53: note: in expansion of macro ‘ATOMIC_SIZE_CAS’
+ #   define ATOMIC_PTR_CAS(var, oldval, val) (void *)ATOMIC_SIZE_CAS(*(size_t *)&(var), (size_t)(oldval), (size_t)(val))
+                                                     ^~~~~~~~~~~~~~~
+iseq.c:540:15: note: in expansion of macro ‘ATOMIC_PTR_CAS’
+  cached_map = ATOMIC_PTR_CAS(type_map_cache, (struct st_table *)0, type_map);
+               ^~~~~~~~~~~~~~
+iseq.c: In function ‘rb_insn_operand_intern’:
+iseq.c:1197:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  op = ID2SYM(op);
+iseq.c:1199:7: note: here
+       case TS_VALUE:  /* VALUE */
+       ^~~~
+In file included from vm.c:18:0:
+vm_insnhelper.c: In function ‘vm_throw’:
+vm_core.h:770:36: warning: left shift of negative value [-Wshift-negative-value]
+ #define VM_FRAME_MAGIC_MASK   (~(~0<<VM_FRAME_MAGIC_MASK_BITS))
+                                    ^
+vm_core.h:772:43: note: in expansion of macro ‘VM_FRAME_MAGIC_MASK’
+ #define VM_FRAME_TYPE(cfp) ((cfp)->flag & VM_FRAME_MAGIC_MASK)
+                                           ^~~~~~~~~~~~~~~~~~~
+vm_insnhelper.c:649:7: note: in expansion of macro ‘VM_FRAME_TYPE’
+   if (VM_FRAME_TYPE(cfp) == VM_FRAME_MAGIC_LAMBDA) {
+       ^~~~~~~~~~~~~
+vm_core.h:770:36: warning: left shift of negative value [-Wshift-negative-value]
+ #define VM_FRAME_MAGIC_MASK   (~(~0<<VM_FRAME_MAGIC_MASK_BITS))
+                                    ^
+vm_core.h:772:43: note: in expansion of macro ‘VM_FRAME_MAGIC_MASK’
+ #define VM_FRAME_TYPE(cfp) ((cfp)->flag & VM_FRAME_MAGIC_MASK)
+                                           ^~~~~~~~~~~~~~~~~~~
+vm_insnhelper.c:719:8: note: in expansion of macro ‘VM_FRAME_TYPE’
+    if (VM_FRAME_TYPE(cfp) == VM_FRAME_MAGIC_LAMBDA) {
+        ^~~~~~~~~~~~~
+vm.c: In function ‘rb_vm_rewind_cfp’:
+vm_core.h:770:36: warning: left shift of negative value [-Wshift-negative-value]
+ #define VM_FRAME_MAGIC_MASK   (~(~0<<VM_FRAME_MAGIC_MASK_BITS))
+                                    ^
+vm_core.h:772:43: note: in expansion of macro ‘VM_FRAME_MAGIC_MASK’
+ #define VM_FRAME_TYPE(cfp) ((cfp)->flag & VM_FRAME_MAGIC_MASK)
+                                           ^~~~~~~~~~~~~~~~~~~
+vm.c:298:6: note: in expansion of macro ‘VM_FRAME_TYPE’
+  if (VM_FRAME_TYPE(th->cfp) != VM_FRAME_MAGIC_CFUNC) {
+      ^~~~~~~~~~~~~
+vm.c: In function ‘hook_before_rewind’:
+vm_core.h:770:36: warning: left shift of negative value [-Wshift-negative-value]
+ #define VM_FRAME_MAGIC_MASK   (~(~0<<VM_FRAME_MAGIC_MASK_BITS))
+                                    ^
+vm_core.h:772:43: note: in expansion of macro ‘VM_FRAME_MAGIC_MASK’
+ #define VM_FRAME_TYPE(cfp) ((cfp)->flag & VM_FRAME_MAGIC_MASK)
+                                           ^~~~~~~~~~~~~~~~~~~
+vm.c:1291:13: note: in expansion of macro ‘VM_FRAME_TYPE’
+     switch (VM_FRAME_TYPE(th->cfp)) {
+             ^~~~~~~~~~~~~
+vm.c: In function ‘vm_exec’:
+vm_core.h:770:36: warning: left shift of negative value [-Wshift-negative-value]
+ #define VM_FRAME_MAGIC_MASK   (~(~0<<VM_FRAME_MAGIC_MASK_BITS))
+                                    ^
+vm_core.h:106:40: note: in definition of macro ‘UNLIKELY’
+ #define UNLIKELY(x) (__builtin_expect((x), 0))
+                                        ^
+vm_core.h:772:43: note: in expansion of macro ‘VM_FRAME_MAGIC_MASK’
+ #define VM_FRAME_TYPE(cfp) ((cfp)->flag & VM_FRAME_MAGIC_MASK)
+                                           ^~~~~~~~~~~~~~~~~~~
+vm.c:1449:19: note: in expansion of macro ‘VM_FRAME_TYPE’
+      if (UNLIKELY(VM_FRAME_TYPE(th->cfp) == VM_FRAME_MAGIC_CFUNC)) {
+                   ^~~~~~~~~~~~~
+In file included from vm_exec.c:108:0,
+                 from vm.c:81:
+insns.def: In function ‘vm_exec_core’:
+insns.def:1276:21: warning: this statement may fall through [-Wimplicit-fallthrough=]
+       case T_FLOAT: {
+                     ^
+insns.def:1282:7: note: here
+       case T_SYMBOL: /* fall through */
+       ^~~~
+In file included from vm.c:79:0:
+vm_insnhelper.c: In function ‘vm_search_super_method’:
+vm_insnhelper.c:2057:2: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  vm_super_outside();
+  ^~~~~~~~~~~~~~~~~~
+vm_insnhelper.c:2058:7: note: here
+       case -2:
+       ^~~~
+compiling vm_dump.c
+In file included from vm_dump.c:14:0:
+vm_dump.c: In function ‘control_frame_dump’:
+vm_core.h:770:36: warning: left shift of negative value [-Wshift-negative-value]
+ #define VM_FRAME_MAGIC_MASK   (~(~0<<VM_FRAME_MAGIC_MASK_BITS))
+                                    ^
+vm_core.h:772:43: note: in expansion of macro ‘VM_FRAME_MAGIC_MASK’
+ #define VM_FRAME_TYPE(cfp) ((cfp)->flag & VM_FRAME_MAGIC_MASK)
+                                           ^~~~~~~~~~~~~~~~~~~
+vm_dump.c:48:13: note: in expansion of macro ‘VM_FRAME_TYPE’
+     switch (VM_FRAME_TYPE(cfp)) {
+             ^~~~~~~~~~~~~
+compiling vm_backtrace.c
+In file included from vm_backtrace.c:17:0:
+vm_backtrace.c: In function ‘backtrace_each’:
+vm_core.h:770:36: warning: left shift of negative value [-Wshift-negative-value]
+ #define VM_FRAME_MAGIC_MASK   (~(~0<<VM_FRAME_MAGIC_MASK_BITS))
+                                    ^
+vm_core.h:772:43: note: in expansion of macro ‘VM_FRAME_MAGIC_MASK’
+ #define VM_FRAME_TYPE(cfp) ((cfp)->flag & VM_FRAME_MAGIC_MASK)
+                                           ^~~~~~~~~~~~~~~~~~~
+vm_core.h:782:4: note: in expansion of macro ‘VM_FRAME_TYPE’
+   (VM_FRAME_TYPE(cfp) == VM_FRAME_MAGIC_CFUNC)
+    ^~~~~~~~~~~~~
+vm_backtrace.c:473:11: note: in expansion of macro ‘RUBYVM_CFUNC_FRAME_P’
+  else if (RUBYVM_CFUNC_FRAME_P(cfp)) {
+           ^~~~~~~~~~~~~~~~~~~~
+compiling vm_trace.c
+compiling thread.c
+compiling cont.c
+compiling ./enc/ascii.c
+compiling ./enc/us_ascii.c
+compiling ./enc/unicode.c
+compiling ./enc/utf_8.c
+compiling newline.c
+compiling ./missing/strlcpy.c
+compiling ./missing/strlcat.c
+compiling ./missing/setproctitle.c
+compiling addr2line.c
+compiling dmyext.c
+addr2line.c: In function ‘kvprintf’:
+addr2line.c:834:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (!dot) {
+       ^
+addr2line.c:838:3: note: here
+   case '1': case '2': case '3': case '4':
+   ^~~~
+addr2line.c:974:10: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    upper = 1;
+    ~~~~~~^~~
+addr2line.c:975:3: note: here
+   case 'x':
+   ^~~~
+compiling dln.c
+compiling localeinit.c
+compiling array.c
+In file included from array.c:14:0:
+array.c: In function ‘rb_ary_cmp’:
+./include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+array.c:3901:12: note: in expansion of macro ‘INT2FIX’
+     return INT2FIX(-1);
+            ^~~~~~~
+array.c: In function ‘rb_ary_rindex’:
+array.c:1515:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+      if (!rb_equal(e, val)) break;
+         ^
+array.c:1516:4: note: here
+    case Qtrue:
+    ^~~~
+array.c: In function ‘rb_ary_index’:
+array.c:1452:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+      if (!rb_equal(e, val)) break;
+         ^
+array.c:1453:4: note: here
+    case Qtrue:
+    ^~~~
+linking miniruby
+generating encdb.h
+rbconfig.rb updated
+creating verconf.h
+generating enc.mk
+generating prelude.c
+compiling prelude.c
+encdb.h unchanged
+compiling loadpath.c
+making srcs under enc
+make[1]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10'
+make[1]: Nothing to be done for 'srcs'.
+make[1]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10'
+generating transdb.h
+linking static-library libruby-static.a
+ar: `u' modifier ignored since `D' is the default (see `U')
+transdb.h unchanged
+verifying static-library libruby-static.a
+linking shared-library libruby.so.2.1.0
+making enc
+making trans
+generating makefile exts.mk
+make[1]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10'
+make[1]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10'
+compiling ./enc/trans/transdb.c
+compiling ./enc/encdb.c
+compiling ./enc/big5.c
+configuring -test-/array/resize
+configuring -test-/bignum
+configuring -test-/bug-3571
+configuring -test-/bug-3662
+configuring -test-/bug-5832
+configuring -test-/bug_reporter
+configuring -test-/class
+configuring -test-/debug
+configuring -test-/dln/empty
+configuring -test-/exception
+compiling ./enc/trans/big5.c
+configuring -test-/fatal
+configuring -test-/file
+compiling ./enc/cp949.c
+configuring -test-/funcall
+configuring -test-/iter
+configuring -test-/load/dot.dot
+configuring -test-/marshal/compat
+configuring -test-/marshal/usr
+configuring -test-/method
+configuring -test-/num2int
+configuring -test-/old_thread_select
+compiling ./enc/emacs_mule.c
+compiling ./enc/euc_jp.c
+configuring -test-/path_to_class
+configuring -test-/postponed_job
+configuring -test-/printf
+configuring -test-/rational
+configuring -test-/recursion
+configuring -test-/st/numhash
+configuring -test-/st/update
+configuring -test-/string
+configuring -test-/struct
+configuring -test-/symbol
+compiling ./enc/euc_kr.c
+configuring -test-/tracepoint
+configuring -test-/typeddata
+configuring -test-/wait_for_single_fd
+configuring -test-/win32/dln
+Failed to configure -test-/win32/dln. It will not be installed.
+configuring -test-/win32/fd_setsize
+Failed to configure -test-/win32/fd_setsize. It will not be installed.
+configuring bigdecimal
+compiling ./enc/euc_tw.c
+compiling ./enc/gb2312.c
+compiling ./enc/gb18030.c
+compiling ./enc/gbk.c
+configuring continuation
+configuring coverage
+configuring date
+compiling ./enc/iso_8859_1.c
+compiling ./enc/iso_8859_2.c
+configuring dbm
+compiling ./enc/iso_8859_3.c
+compiling ./enc/iso_8859_4.c
+compiling ./enc/iso_8859_5.c
+compiling ./enc/iso_8859_6.c
+compiling ./enc/iso_8859_8.c
+compiling ./enc/iso_8859_7.c
+compiling ./enc/iso_8859_9.c
+compiling ./enc/iso_8859_10.c
+compiling ./enc/iso_8859_11.c
+compiling ./enc/iso_8859_13.c
+compiling ./enc/iso_8859_14.c
+compiling ./enc/iso_8859_15.c
+compiling ./enc/iso_8859_16.c
+compiling ./enc/koi8_r.c
+compiling ./enc/koi8_u.c
+compiling ./enc/shift_jis.c
+compiling ./enc/utf_16be.c
+compiling ./enc/utf_16le.c
+compiling ./enc/utf_32be.c
+compiling ./enc/utf_32le.c
+compiling ./enc/windows_31j.c
+compiling ./enc/windows_1250.c
+compiling ./enc/windows_1251.c
+compiling ./enc/windows_1252.c
+linking encoding encdb.so
+linking encoding big5.so
+compiling ./enc/trans/chinese.c
+linking encoding cp949.so
+linking encoding emacs_mule.so
+linking encoding euc_jp.so
+linking encoding euc_kr.so
+linking encoding euc_tw.so
+linking encoding gb2312.so
+linking encoding gb18030.so
+linking encoding gbk.so
+linking encoding iso_8859_1.so
+linking encoding iso_8859_2.so
+linking encoding iso_8859_3.so
+linking encoding iso_8859_4.so
+linking encoding iso_8859_5.so
+linking encoding iso_8859_6.so
+linking encoding iso_8859_7.so
+linking encoding iso_8859_8.so
+linking encoding iso_8859_9.so
+linking encoding iso_8859_10.so
+linking encoding iso_8859_11.so
+linking encoding iso_8859_13.so
+linking encoding iso_8859_14.so
+linking encoding iso_8859_15.so
+linking encoding iso_8859_16.so
+linking encoding koi8_r.so
+linking encoding koi8_u.so
+linking encoding shift_jis.so
+linking encoding utf_16be.so
+linking encoding utf_16le.so
+compiling ./enc/trans/emoji.c
+linking encoding utf_32be.so
+linking encoding utf_32le.so
+linking encoding windows_31j.so
+linking encoding windows_1250.so
+linking encoding windows_1251.so
+linking encoding windows_1252.so
+make[1]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10'
+compiling ./enc/trans/emoji_iso2022_kddi.c
+compiling ./enc/trans/emoji_sjis_docomo.c
+compiling ./enc/trans/emoji_sjis_kddi.c
+Failed to configure dbm. It will not be installed.
+configuring digest
+configuring digest/bubblebabble
+configuring digest/md5
+compiling ./enc/trans/emoji_sjis_softbank.c
+compiling ./enc/trans/escape.c
+compiling ./enc/trans/gb18030.c
+configuring digest/rmd160
+compiling ./enc/trans/gbk.c
+compiling ./enc/trans/iso2022.c
+compiling ./enc/trans/japanese.c
+configuring digest/sha1
+compiling ./enc/trans/japanese_euc.c
+compiling ./enc/trans/japanese_sjis.c
+compiling ./enc/trans/korean.c
+configuring digest/sha2
+compiling ./enc/trans/single_byte.c
+compiling ./enc/trans/utf8_mac.c
+compiling ./enc/trans/utf_16_32.c
+linking transcoder transdb.so
+configuring dl
+linking transcoder big5.so
+linking transcoder chinese.so
+linking transcoder emoji.so
+linking transcoder emoji_iso2022_kddi.so
+linking transcoder emoji_sjis_docomo.so
+linking transcoder emoji_sjis_kddi.so
+linking transcoder emoji_sjis_softbank.so
+linking transcoder escape.so
+linking transcoder gb18030.so
+linking transcoder gbk.so
+linking transcoder iso2022.so
+linking transcoder japanese.so
+linking transcoder japanese_euc.so
+linking transcoder japanese_sjis.so
+linking transcoder korean.so
+linking transcoder single_byte.so
+linking transcoder utf_16_32.so
+linking transcoder utf8_mac.so
+make[1]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10'
+making encs
+make[1]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10'
+make[1]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10'
+configuring dl/callback
+configuring etc
+configuring fcntl
+configuring fiber
+configuring fiddle
+configuring gdbm
+configuring io/console
+configuring io/nonblock
+configuring io/wait
+configuring json
+configuring json/generator
+configuring json/parser
+configuring mathn/complex
+configuring mathn/rational
+configuring nkf
+configuring objspace
+configuring openssl
+configuring pathname
+configuring psych
+configuring pty
+configuring racc/cparse
+configuring rbconfig/sizeof
+configuring readline
+configuring ripper
+configuring sdbm
+configuring socket
+configuring stringio
+configuring strscan
+configuring syslog
+configuring thread
+configuring tk
+...........
+check struct members..
+check libraries....
+Use ActiveTcl libraries (if available).
+Search tclConfig.sh and tkConfig.sh..............................
+Fail to find [tclConfig.sh, tkConfig.sh]
+Use X11 libraries (or use TK_XINCLUDES/TK_XLIBSW information on tkConfig.sh).
+
+Search tcl.h..
+Search tk.h..Search Tcl library..........
+Warning:: cannot find Tcl library. tcltklib will not be compiled (tcltklib is disabled on your Ruby. That is, Ruby/Tk will not work). Please check configure options.
+
+Can't find proper Tcl/Tk libraries. So, can't make tcltklib.so which is required by Ruby/Tk.
+If you have Tcl/Tk libraries on your environment, you may be able to use them with configure options (see ext/tk/README.tcltklib).
+At present, Tcl/Tk8.6 is not supported. Although you can try to use Tcl/Tk8.6 with configure options, it will not work correctly. I recommend you to use Tcl/Tk8.5 or 8.4.
+Failed to configure tk. It will not be installed.
+configuring tk/tkutil
+Failed to configure tk/tkutil. It will not be installed.
+configuring win32
+Failed to configure win32. It will not be installed.
+configuring win32ole
+Failed to configure win32ole. It will not be installed.
+configuring zlib
+make[1]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/bignum'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/bug-3662'
+compiling bug.c
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/array/resize'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/bug-3571'
+compiling bug.c
+compiling resize.c
+compiling big2str.c
+installing default bug libraries
+linking shared-object -test-/bug-3662/bug.so
+installing default resize libraries
+linking shared-object -test-/array/resize.so
+installing default bug libraries
+linking shared-object -test-/bug-3571/bug.so
+compiling mul.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/bug-3662'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/bug-5832'
+compiling bug.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/array/resize'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/bug_reporter'
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/bug-3571'
+compiling bug_reporter.c
+installing default bug_reporter libraries
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/class'
+compiling class2name.c
+installing default bug libraries
+linking shared-object -test-/bug-5832/bug.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/bug-5832'
+linking shared-object -test-/bug_reporter/bug_reporter.so
+compiling str2big.c
+compiling init.c
+installing default class libraries
+compiling intpack.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/bug_reporter'
+compiling init.c
+linking shared-object -test-/class.so
+compiling div.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/class'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/debug'
+compiling inspector.c
+compiling bigzero.c
+installing default bignum libraries
+compiling profile_frames.c
+compiling init.c
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/dln/empty'
+compiling empty.c
+installing default empty libraries
+linking shared-object -test-/dln/empty.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/dln/empty'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/exception'
+compiling enc_raise.c
+linking shared-object -test-/bignum.so
+installing default debug libraries
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/fatal'
+compiling rb_fatal.c
+linking shared-object -test-/debug.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/bignum'
+installing default rb_fatal libraries
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/file'
+compiling stat.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/debug'
+linking shared-object -test-/fatal/rb_fatal.so
+compiling init.c
+compiling dataerror.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/fatal'
+compiling init.c
+installing default file libraries
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/funcall'
+compiling passing_block.c
+linking shared-object -test-/file.so
+installing default funcall libraries
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/iter'
+compiling break.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/file'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/load/dot.dot'
+compiling dot.dot.c
+compiling ensured.c
+installing default dot.dot libraries
+linking shared-object -test-/load/dot.dot/dot.dot.so
+linking shared-object -test-/funcall/funcall.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/load/dot.dot'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/marshal/compat'
+compiling usrcompat.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/funcall'
+installing default exception libraries
+compiling yield.c
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/marshal/usr'
+compiling usrmarshal.c
+linking shared-object -test-/exception.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/exception'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/method'
+compiling arity.c
+installing default compat libraries
+linking shared-object -test-/marshal/compat.so
+installing default usr libraries
+linking shared-object -test-/marshal/usr.so
+compiling init.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/marshal/compat'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/num2int'
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/marshal/usr'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/old_thread_select'
+compiling old_thread_select.c
+compiling num2int.c
+compiling init.c
+installing default iter libraries
+linking shared-object -test-/iter.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/iter'
+installing default method libraries
+installing default num2int libraries
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/path_to_class'
+compiling path_to_class.c
+linking shared-object -test-/num2int/num2int.so
+linking shared-object -test-/method.so
+installing default old_thread_select libraries
+linking shared-object -test-/old_thread_select/old_thread_select.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/num2int'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/postponed_job'
+compiling postponed_job.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/method'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/printf'
+compiling printf.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/old_thread_select'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/rational'
+compiling rat.c
+installing default path_to_class libraries
+linking shared-object -test-/path_to_class/path_to_class.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/path_to_class'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/recursion'
+compiling recursion.c
+installing default postponed_job libraries
+linking shared-object -test-/postponed_job.so
+printf.c: In function ‘printf_test_call’:
+printf.c:93:9: warning: ‘s’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  result = rb_enc_sprintf(rb_usascii_encoding(), format, s);
+  ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+printf.c:96:9: warning: ‘n’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  result = rb_enc_sprintf(rb_usascii_encoding(), format, n);
+  ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+installing default rational libraries
+linking shared-object -test-/rational.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/postponed_job'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/st/numhash'
+compiling numhash.c
+installing default printf libraries
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/rational'
+linking shared-object -test-/printf.so
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/st/update'
+compiling update.c
+installing default recursion libraries
+linking shared-object -test-/recursion.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/printf'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/string'
+compiling qsort.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/recursion'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/struct'
+compiling member.c
+installing default update libraries
+linking shared-object -test-/st/update.so
+installing default numhash libraries
+linking shared-object -test-/st/numhash.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/st/update'
+compiling modify.c
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/symbol'
+compiling type.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/st/numhash'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/tracepoint'
+compiling gc_hook.c
+compiling init.c
+compiling ellipsize.c
+compiling intern.c
+compiling tracepoint.c
+installing default struct libraries
+linking shared-object -test-/struct.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/struct'
+compiling normalize.c
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/typeddata'
+compiling typeddata.c
+compiling init.c
+installing default tracepoint libraries
+compiling set_len.c
+linking shared-object -test-/tracepoint.so
+installing default typeddata libraries
+installing default symbol libraries
+linking shared-object -test-/symbol.so
+linking shared-object -test-/typeddata/typeddata.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/tracepoint'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/wait_for_single_fd'
+compiling wait_for_single_fd.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/typeddata'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/win32/dln'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/win32/dln'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/win32/fd_setsize'
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/symbol'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/win32/fd_setsize'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/continuation'
+compiling continuation.c
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/bigdecimal'
+compiling bigdecimal.c
+compiling enc_str_buf_cat.c
+installing default continuation libraries
+linking shared-object continuation.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/continuation'
+installing default wait_for_single_fd libraries
+In file included from bigdecimal.h:12:0,
+                 from bigdecimal.c:13:
+bigdecimal.c: In function ‘BigDecimal_IsInfinite’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bigdecimal.c:615:31: note: in expansion of macro ‘INT2FIX’
+     if (VpIsNegInf(p)) return INT2FIX(-1);
+                               ^~~~~~~
+bigdecimal.c: In function ‘BigDecimal_to_i’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bigdecimal.c:673:48: note: in expansion of macro ‘INT2FIX’
+      numerator = rb_funcall(numerator, '*', 1, INT2FIX(-1));
+                                                ^~~~~~~
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/coverage'
+bigdecimal.c: In function ‘BigDecimal_to_r’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bigdecimal.c:761:44: note: in expansion of macro ‘INT2FIX’
+  numerator = rb_funcall(numerator, '*', 1, INT2FIX(-1));
+                                            ^~~~~~~
+linking shared-object -test-/wait_for_single_fd/wait_for_single_fd.so
+compiling coverage.c
+In file included from bigdecimal.c:13:0:
+bigdecimal.c: In function ‘BigMath_s_exp’:
+bigdecimal.h:298:62: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+ #define VpSetPosInf(a)  ((a)->frac[0]=0,(a)->Prec=1,(a)->sign=VP_SIGN_POSITIVE_INFINITE)
+                                                              ^
+bigdecimal.h:300:35: note: in expansion of macro ‘VpSetPosInf’
+ #define VpSetInf(a,s)   ( ((s)>0)?VpSetPosInf(a):VpSetNegInf(a) )
+                                   ^~~~~~~~~~~
+bigdecimal.c:2746:6: note: in expansion of macro ‘VpSetInf’
+      VpSetInf(vy, VP_SIGN_POSITIVE_INFINITE);
+      ^~~~~~~~
+bigdecimal.c: In function ‘BigMath_s_log’:
+bigdecimal.h:298:62: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+ #define VpSetPosInf(a)  ((a)->frac[0]=0,(a)->Prec=1,(a)->sign=VP_SIGN_POSITIVE_INFINITE)
+                                                              ^
+bigdecimal.h:300:35: note: in expansion of macro ‘VpSetPosInf’
+ #define VpSetInf(a,s)   ( ((s)>0)?VpSetPosInf(a):VpSetNegInf(a) )
+                                   ^~~~~~~~~~~
+bigdecimal.c:2898:2: note: in expansion of macro ‘VpSetInf’
+  VpSetInf(vy, VP_SIGN_POSITIVE_INFINITE);
+  ^~~~~~~~
+In file included from bigdecimal.h:12:0,
+                 from bigdecimal.c:13:
+bigdecimal.c: In function ‘Init_bigdecimal’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bigdecimal.c:3199:59: note: in expansion of macro ‘INT2FIX’
+     rb_define_const(rb_cBigDecimal, "SIGN_NEGATIVE_ZERO", INT2FIX(VP_SIGN_NEGATIVE_ZERO));
+                                                           ^~~~~~~
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bigdecimal.c:3205:61: note: in expansion of macro ‘INT2FIX’
+     rb_define_const(rb_cBigDecimal, "SIGN_NEGATIVE_FINITE", INT2FIX(VP_SIGN_NEGATIVE_FINITE));
+                                                             ^~~~~~~
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+bigdecimal.c:3211:63: note: in expansion of macro ‘INT2FIX’
+     rb_define_const(rb_cBigDecimal, "SIGN_NEGATIVE_INFINITE", INT2FIX(VP_SIGN_NEGATIVE_INFINITE));
+                                                               ^~~~~~~
+In file included from bigdecimal.c:13:0:
+bigdecimal.c: In function ‘VpAlloc’:
+bigdecimal.h:285:62: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+ #define VpSetPosZero(a) ((a)->frac[0]=0,(a)->Prec=1,(a)->sign=VP_SIGN_POSITIVE_ZERO)
+                                                              ^
+bigdecimal.h:287:35: note: in expansion of macro ‘VpSetPosZero’
+ #define VpSetZero(a,s)  ( ((s)>0)?VpSetPosZero(a):VpSetNegZero(a) )
+                                   ^~~~~~~~~~~~
+bigdecimal.c:3870:2: note: in expansion of macro ‘VpSetZero’
+  VpSetZero(vp, 1);    /* initialize vp to zero. */
+  ^~~~~~~~~
+bigdecimal.c: In function ‘VpAddSub’:
+bigdecimal.h:286:62: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+ #define VpSetNegZero(a) ((a)->frac[0]=0,(a)->Prec=1,(a)->sign=VP_SIGN_NEGATIVE_ZERO)
+                                                              ^
+bigdecimal.h:287:51: note: in expansion of macro ‘VpSetNegZero’
+ #define VpSetZero(a,s)  ( ((s)>0)?VpSetPosZero(a):VpSetNegZero(a) )
+                                                   ^~~~~~~~~~~~
+bigdecimal.c:4065:3: note: in expansion of macro ‘VpSetZero’
+   VpSetZero(c, -1);
+   ^~~~~~~~~
+bigdecimal.h:285:62: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+ #define VpSetPosZero(a) ((a)->frac[0]=0,(a)->Prec=1,(a)->sign=VP_SIGN_POSITIVE_ZERO)
+                                                              ^
+bigdecimal.h:287:35: note: in expansion of macro ‘VpSetPosZero’
+ #define VpSetZero(a,s)  ( ((s)>0)?VpSetPosZero(a):VpSetNegZero(a) )
+                                   ^~~~~~~~~~~~
+bigdecimal.c:4068:3: note: in expansion of macro ‘VpSetZero’
+   VpSetZero(c, 1);
+   ^~~~~~~~~
+bigdecimal.h:285:62: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+ #define VpSetPosZero(a) ((a)->frac[0]=0,(a)->Prec=1,(a)->sign=VP_SIGN_POSITIVE_ZERO)
+                                                              ^
+bigdecimal.h:287:35: note: in expansion of macro ‘VpSetPosZero’
+ #define VpSetZero(a,s)  ( ((s)>0)?VpSetPosZero(a):VpSetNegZero(a) )
+                                   ^~~~~~~~~~~~
+bigdecimal.c:4122:6: note: in expansion of macro ‘VpSetZero’
+      VpSetZero(c, 1);        /* abs(a)=abs(b) and operation = '-'  */
+      ^~~~~~~~~
+bigdecimal.c: In function ‘VpDtoV’:
+bigdecimal.h:285:62: warning: right-hand operand of comma expression has no effect [-Wunused-value]
+ #define VpSetPosZero(a) ((a)->frac[0]=0,(a)->Prec=1,(a)->sign=VP_SIGN_POSITIVE_ZERO)
+                                                              ^
+bigdecimal.h:287:35: note: in expansion of macro ‘VpSetPosZero’
+ #define VpSetZero(a,s)  ( ((s)>0)?VpSetPosZero(a):VpSetNegZero(a) )
+                                   ^~~~~~~~~~~~
+bigdecimal.c:5561:2: note: in expansion of macro ‘VpSetZero’
+  VpSetZero(m, 1);
+  ^~~~~~~~~
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/wait_for_single_fd'
+installing default coverage libraries
+compiling coderange.c
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/date'
+compiling date_strptime.c
+linking shared-object coverage.so
+compiling enc_associate.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/coverage'
+compiling date_strftime.c
+date_strftime.c: In function ‘date_strftime_with_tmx’:
+date_strftime.c:573:14: warning: this statement may fall through [-Wimplicit-fallthrough=]
+      padding = '0';
+      ~~~~~~~~^~~~~
+date_strftime.c:574:4: note: here
+    case '1':  case '2': case '3': case '4':
+    ^~~~
+compiling init.c
+compiling cstr.c
+installing default string libraries
+linking shared-object -test-/string/string.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/-test-/string'
+compiling date_parse.c
+installing default bigdecimal libraries
+compiling date_core.c
+In file included from ../.././include/ruby.h:33:0,
+                 from date_core.c:5:
+date_core.c: In function ‘date_s_ordinal’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+date_core.c:3303:9: note: in expansion of macro ‘INT2FIX’
+     y = INT2FIX(-4712);
+         ^~~~~~~
+date_core.c: In function ‘date_s_civil’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+date_core.c:3371:9: note: in expansion of macro ‘INT2FIX’
+     y = INT2FIX(-4712);
+         ^~~~~~~
+date_core.c: In function ‘date_s_commercial’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+date_core.c:3448:9: note: in expansion of macro ‘INT2FIX’
+     y = INT2FIX(-4712);
+         ^~~~~~~
+date_core.c: In function ‘d_lite_downto’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+date_core.c:6162:27: note: in expansion of macro ‘INT2FIX’
+  date = d_lite_plus(date, INT2FIX(-1));
+                           ^~~~~~~
+date_core.c: In function ‘cmp_dd’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+date_core.c:6207:11: note: in expansion of macro ‘INT2FIX’
+    return INT2FIX(-1);
+           ^~~~~~~
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+date_core.c:6214:14: note: in expansion of macro ‘INT2FIX’
+       return INT2FIX(-1);
+              ^~~~~~~
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+date_core.c:6221:10: note: in expansion of macro ‘INT2FIX’
+   return INT2FIX(-1);
+          ^~~~~~~
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+date_core.c:6228:13: note: in expansion of macro ‘INT2FIX’
+      return INT2FIX(-1);
+             ^~~~~~~
+date_core.c: In function ‘d_lite_cmp’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+date_core.c:6280:14: note: in expansion of macro ‘INT2FIX’
+       return INT2FIX(-1);
+              ^~~~~~~
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+date_core.c:6287:10: note: in expansion of macro ‘INT2FIX’
+   return INT2FIX(-1);
+          ^~~~~~~
+date_core.c: In function ‘datetime_s_ordinal’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+date_core.c:7229:9: note: in expansion of macro ‘INT2FIX’
+     y = INT2FIX(-4712);
+         ^~~~~~~
+date_core.c: In function ‘datetime_s_civil’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+date_core.c:7305:9: note: in expansion of macro ‘INT2FIX’
+     y = INT2FIX(-4712);
+         ^~~~~~~
+date_core.c: In function ‘datetime_s_commercial’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+date_core.c:7402:9: note: in expansion of macro ‘INT2FIX’
+     y = INT2FIX(-4712);
+         ^~~~~~~
+date_core.c: In function ‘datetime_s_jisx0301’:
+date_core.c:8084:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  str = rb_str_new2("-4712-01-01T00:00:00+00:00");
+date_core.c:8085:7: note: here
+       case 1:
+       ^~~~
+installing default date_core libraries
+date_core.c: In function ‘datetime_s_httpdate’:
+date_core.c:8054:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  str = rb_str_new2("Mon, 01 Jan -4712 00:00:00 GMT");
+date_core.c:8055:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘datetime_s_rfc2822’:
+date_core.c:8024:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  str = rb_str_new2("Mon, 1 Jan -4712 00:00:00 +0000");
+date_core.c:8025:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘datetime_s_xmlschema’:
+date_core.c:7993:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  str = rb_str_new2("-4712-01-01T00:00:00+00:00");
+date_core.c:7994:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘datetime_s_rfc3339’:
+date_core.c:7963:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  str = rb_str_new2("-4712-01-01T00:00:00+00:00");
+date_core.c:7964:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘datetime_s_iso8601’:
+date_core.c:7933:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  str = rb_str_new2("-4712-01-01T00:00:00+00:00");
+date_core.c:7934:7: note: here
+       case 1:
+       ^~~~
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/dbm'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/dbm'
+date_core.c: In function ‘datetime_s_parse’:
+date_core.c:7893:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  str = rb_str_new2("-4712-01-01T00:00:00+00:00");
+date_core.c:7894:7: note: here
+       case 1:
+       ^~~~
+date_core.c:7895:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  comp = Qtrue;
+date_core.c:7896:7: note: here
+       case 2:
+       ^~~~
+date_core.c: In function ‘datetime_s_strptime’:
+date_core.c:7850:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  str = rb_str_new2("-4712-01-01T00:00:00+00:00");
+date_core.c:7851:7: note: here
+       case 1:
+       ^~~~
+date_core.c:7852:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  fmt = rb_str_new2("%FT%T%z");
+date_core.c:7853:7: note: here
+       case 2:
+       ^~~~
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/digest'
+compiling digest.c
+date_core.c: In function ‘datetime_s_commercial’:
+date_core.c:3223:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (!c_valid_start_p(dsg)) {\
+        ^
+date_core.c:7413:2: note: in expansion of macro ‘val2sg’
+  val2sg(vsg, sg);
+  ^~~~~~
+date_core.c:7414:7: note: here
+       case 7:
+       ^~~~
+date_core.c:4663:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (!offset_to_sec(vof, &iof)) {\
+        ^
+date_core.c:7415:2: note: in expansion of macro ‘val2off’
+  val2off(vof, rof);
+  ^~~~~~~
+date_core.c:7416:7: note: here
+       case 6:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:7417:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(s, positive_inf);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:7418:7: note: here
+       case 5:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:7419:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(min, 5);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:7420:7: note: here
+       case 4:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:7421:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(h, 4);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:7422:7: note: here
+       case 3:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:7423:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(d, 3);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:7424:7: note: here
+       case 2:
+       ^~~~
+date_core.c:7425:4: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  w = NUM2INT(vw);
+date_core.c:7426:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘datetime_s_civil’:
+date_core.c:3223:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (!c_valid_start_p(dsg)) {\
+        ^
+date_core.c:7316:2: note: in expansion of macro ‘val2sg’
+  val2sg(vsg, sg);
+  ^~~~~~
+date_core.c:7317:7: note: here
+       case 7:
+       ^~~~
+date_core.c:4663:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (!offset_to_sec(vof, &iof)) {\
+        ^
+date_core.c:7318:2: note: in expansion of macro ‘val2off’
+  val2off(vof, rof);
+  ^~~~~~~
+date_core.c:7319:7: note: here
+       case 6:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:7320:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(s, positive_inf);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:7321:7: note: here
+       case 5:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:7322:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(min, 5);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:7323:7: note: here
+       case 4:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:7324:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(h, 4);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:7325:7: note: here
+       case 3:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:7326:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(d, 3);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:7327:7: note: here
+       case 2:
+       ^~~~
+date_core.c:7328:4: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  m = NUM2INT(vm);
+date_core.c:7329:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘datetime_s_ordinal’:
+date_core.c:3223:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (!c_valid_start_p(dsg)) {\
+        ^
+date_core.c:7239:2: note: in expansion of macro ‘val2sg’
+  val2sg(vsg, sg);
+  ^~~~~~
+date_core.c:7240:7: note: here
+       case 6:
+       ^~~~
+date_core.c:4663:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (!offset_to_sec(vof, &iof)) {\
+        ^
+date_core.c:7241:2: note: in expansion of macro ‘val2off’
+  val2off(vof, rof);
+  ^~~~~~~
+date_core.c:7242:7: note: here
+       case 5:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:7243:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(s, positive_inf);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:7244:7: note: here
+       case 4:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:7245:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(min, 4);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:7246:7: note: here
+       case 3:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:7247:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(h, 3);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:7248:7: note: here
+       case 2:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:7249:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(d, 2);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:7250:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘datetime_s_jd’:
+date_core.c:3223:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (!c_valid_start_p(dsg)) {\
+        ^
+date_core.c:7170:2: note: in expansion of macro ‘val2sg’
+  val2sg(vsg, sg);
+  ^~~~~~
+date_core.c:7171:7: note: here
+       case 5:
+       ^~~~
+date_core.c:4663:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (!offset_to_sec(vof, &iof)) {\
+        ^
+date_core.c:7172:2: note: in expansion of macro ‘val2off’
+  val2off(vof, rof);
+  ^~~~~~~
+date_core.c:7173:7: note: here
+       case 4:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:7174:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(s, positive_inf);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:7175:7: note: here
+       case 3:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:7176:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(min, 3);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:7177:7: note: here
+       case 2:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:7178:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(h, 2);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:7179:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘date_s_jisx0301’:
+date_core.c:4603:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  str = rb_str_new2("-4712-01-01");
+date_core.c:4604:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘date_s_httpdate’:
+date_core.c:4562:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  str = rb_str_new2("Mon, 01 Jan -4712 00:00:00 GMT");
+date_core.c:4563:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘date_s_rfc2822’:
+date_core.c:4520:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  str = rb_str_new2("Mon, 1 Jan -4712 00:00:00 +0000");
+date_core.c:4521:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘date_s_xmlschema’:
+date_core.c:4476:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  str = rb_str_new2("-4712-01-01");
+date_core.c:4477:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘date_s_rfc3339’:
+date_core.c:4435:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  str = rb_str_new2("-4712-01-01T00:00:00+00:00");
+date_core.c:4436:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘date_s_iso8601’:
+date_core.c:4394:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  str = rb_str_new2("-4712-01-01");
+date_core.c:4395:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘date_s_parse’:
+date_core.c:4338:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  str = rb_str_new2("-4712-01-01");
+date_core.c:4339:7: note: here
+       case 1:
+       ^~~~
+date_core.c:4340:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  comp = Qtrue;
+date_core.c:4341:7: note: here
+       case 2:
+       ^~~~
+date_core.c: In function ‘date_s_strptime’:
+date_core.c:4247:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  str = rb_str_new2("-4712-01-01");
+date_core.c:4248:7: note: here
+       case 1:
+       ^~~~
+date_core.c:4249:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  fmt = rb_str_new2("%F");
+date_core.c:4250:7: note: here
+       case 2:
+       ^~~~
+date_core.c: In function ‘date_s_commercial’:
+date_core.c:3223:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (!c_valid_start_p(dsg)) {\
+        ^
+date_core.c:3456:2: note: in expansion of macro ‘val2sg’
+  val2sg(vsg, sg);
+  ^~~~~~
+date_core.c:3457:7: note: here
+       case 3:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:3458:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(d, positive_inf);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:3459:7: note: here
+       case 2:
+       ^~~~
+date_core.c:3460:4: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  w = NUM2INT(vw);
+date_core.c:3461:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘date_s_civil’:
+date_core.c:3223:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (!c_valid_start_p(dsg)) {\
+        ^
+date_core.c:3379:2: note: in expansion of macro ‘val2sg’
+  val2sg(vsg, sg);
+  ^~~~~~
+date_core.c:3380:7: note: here
+       case 3:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:3381:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(d, positive_inf);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:3382:7: note: here
+       case 2:
+       ^~~~
+date_core.c:3383:4: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  m = NUM2INT(vm);
+date_core.c:3384:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘date_s_ordinal’:
+date_core.c:3223:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (!c_valid_start_p(dsg)) {\
+        ^
+date_core.c:3310:2: note: in expansion of macro ‘val2sg’
+  val2sg(vsg, sg);
+  ^~~~~~
+date_core.c:3311:7: note: here
+       case 2:
+       ^~~~
+date_core.c:3199:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (f_nonzero_p(fr)) {\
+        ^
+date_core.c:3312:2: note: in expansion of macro ‘num2int_with_frac’
+  num2int_with_frac(d, positive_inf);
+  ^~~~~~~~~~~~~~~~~
+date_core.c:3313:7: note: here
+       case 1:
+       ^~~~
+date_core.c: In function ‘date_s_jd’:
+date_core.c:3223:8: warning: this statement may fall through [-Wimplicit-fallthrough=]
+     if (!c_valid_start_p(dsg)) {\
+        ^
+date_core.c:3258:2: note: in expansion of macro ‘val2sg’
+  val2sg(vsg, sg);
+  ^~~~~~
+date_core.c:3259:7: note: here
+       case 1:
+       ^~~~
+linking shared-object digest.so
+installing digest libraries
+installing default digest libraries
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/digest'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/digest/bubblebabble'
+compiling bubblebabble.c
+installing default bubblebabble libraries
+linking shared-object digest/bubblebabble.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/digest/bubblebabble'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/digest/md5'
+compiling md5init.c
+compiling md5ossl.c
+installing default md5 libraries
+linking shared-object digest/md5.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/digest/md5'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/digest/rmd160'
+compiling rmd160init.c
+compiling rmd160.c
+installing default rmd160 libraries
+linking shared-object digest/rmd160.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/digest/rmd160'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/digest/sha1'
+compiling sha1init.c
+compiling sha1ossl.c
+linking shared-object bigdecimal.so
+installing default sha1 libraries
+linking shared-object digest/sha1.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/bigdecimal'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/digest/sha2'
+compiling sha2init.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/digest/sha1'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/dl'
+compiling cptr.c
+In file included from cptr.c:5:0:
+cptr.c: In function ‘rb_dlptr_cmp’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+../.././include/ruby/ruby.h:1285:21: note: in expansion of macro ‘INT2FIX’
+ # define INT2NUM(v) INT2FIX((int)(v))
+                     ^~~~~~~
+cptr.c:438:36: note: in expansion of macro ‘INT2NUM’
+     return diff > 0 ? INT2NUM(1) : INT2NUM(-1);
+                                    ^~~~~~~
+compiling sha2ossl.c
+compiling cfunc.c
+installing default sha2 libraries
+linking shared-object digest/sha2.so
+compiling dl.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/digest/sha2'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/dl/callback'
+compiling callback.c
+In file included from dl.c:8:0:
+dl.c: In function ‘Init_dl’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+../.././include/ruby/ruby.h:1285:21: note: in expansion of macro ‘INT2FIX’
+ # define INT2NUM(v) INT2FIX((int)(v))
+                     ^~~~~~~
+dl.c:350:45: note: in expansion of macro ‘INT2NUM’
+     rb_define_const(rb_mDL, "TYPE_SIZE_T",  INT2NUM(DLTYPE_SIZE_T));
+                                             ^~~~~~~
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+../.././include/ruby/ruby.h:1285:21: note: in expansion of macro ‘INT2FIX’
+ # define INT2NUM(v) INT2FIX((int)(v))
+                     ^~~~~~~
+dl.c:374:47: note: in expansion of macro ‘INT2NUM’
+     rb_define_const(rb_mDL, "TYPE_UINTPTR_T", INT2NUM(DLTYPE_UINTPTR_T));
+                                               ^~~~~~~
+compiling callback-0.c
+compiling handle.c
+installing dl libraries
+installing default dl libraries
+compiling callback-1.c
+linking shared-object dl.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/dl'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/etc'
+compiling etc.c
+installing default etc libraries
+linking shared-object etc.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/etc'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/fcntl'
+compiling fcntl.c
+linking shared-object date_core.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/date'
+installing default fcntl libraries
+compiling callback-2.c
+linking shared-object fcntl.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/fcntl'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/fiber'
+compiling fiber.c
+installing default fiber libraries
+linking shared-object fiber.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/fiber'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/fiddle'
+compiling pointer.c
+In file included from pointer.c:5:0:
+pointer.c: In function ‘rb_fiddle_ptr_cmp’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+../.././include/ruby/ruby.h:1285:21: note: in expansion of macro ‘INT2FIX’
+ # define INT2NUM(v) INT2FIX((int)(v))
+                     ^~~~~~~
+pointer.c:478:36: note: in expansion of macro ‘INT2NUM’
+     return diff > 0 ? INT2NUM(1) : INT2NUM(-1);
+                                    ^~~~~~~
+compiling fiddle.c
+In file included from ../.././include/ruby.h:33:0,
+                 from ./fiddle.h:4,
+                 from fiddle.c:1:
+fiddle.c: In function ‘Init_fiddle’:
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+../.././include/ruby/ruby.h:1285:21: note: in expansion of macro ‘INT2FIX’
+ # define INT2NUM(v) INT2FIX((int)(v))
+                     ^~~~~~~
+fiddle.c:233:47: note: in expansion of macro ‘INT2NUM’
+     rb_define_const(mFiddle, "TYPE_SIZE_T",   INT2NUM(TYPE_SIZE_T));
+                                               ^~~~~~~
+../.././include/ruby/ruby.h:231:48: warning: left shift of negative value [-Wshift-negative-value]
+ #define INT2FIX(i) ((VALUE)(((SIGNED_VALUE)(i))<<1 | FIXNUM_FLAG))
+                                                ^
+../.././include/ruby/ruby.h:1285:21: note: in expansion of macro ‘INT2FIX’
+ # define INT2NUM(v) INT2FIX((int)(v))
+                     ^~~~~~~
+fiddle.c:257:49: note: in expansion of macro ‘INT2NUM’
+     rb_define_const(mFiddle, "TYPE_UINTPTR_T",  INT2NUM(TYPE_UINTPTR_T));
+                                                 ^~~~~~~
+compiling closure.c
+compiling callback-3.c
+compiling handle.c
+compiling callback-4.c
+compiling function.c
+compiling conversions.c
+linking shared-object fiddle.so
+installing default fiddle libraries
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/fiddle'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/gdbm'
+compiling gdbm.c
+compiling callback-5.c
+installing default gdbm libraries
+linking shared-object gdbm.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/gdbm'
+compiling callback-6.c
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/io/console'
+compiling console.c
+compiling callback-7.c
+linking shared-object io/console.so
+installing default console libraries
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/io/console'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/io/nonblock'
+compiling nonblock.c
+installing default nonblock libraries
+linking shared-object io/nonblock.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/io/nonblock'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/io/wait'
+compiling wait.c
+installing default wait libraries
+linking shared-object io/wait.so
+compiling callback-8.c
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/io/wait'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/json'
+installing default libraries
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/json'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/json/generator'
+compiling generator.c
+generator.c: In function ‘convert_UTF8_to_JSON_ASCII’:
+generator.c:148:41: warning: this statement may fall through [-Wimplicit-fallthrough=]
+             case 5: ch += *source++; ch <<= 6; /* remember, illegal UTF-8 */
+                                      ~~~^~~~~
+generator.c:149:13: note: here
+             case 4: ch += *source++; ch <<= 6; /* remember, illegal UTF-8 */
+             ^~~~
+generator.c:149:41: warning: this statement may fall through [-Wimplicit-fallthrough=]
+             case 4: ch += *source++; ch <<= 6; /* remember, illegal UTF-8 */
+                                      ~~~^~~~~
+generator.c:150:13: note: here
+             case 3: ch += *source++; ch <<= 6;
+             ^~~~
+generator.c:150:41: warning: this statement may fall through [-Wimplicit-fallthrough=]
+             case 3: ch += *source++; ch <<= 6;
+                                      ~~~^~~~~
+generator.c:151:13: note: here
+             case 2: ch += *source++; ch <<= 6;
+             ^~~~
+generator.c:151:41: warning: this statement may fall through [-Wimplicit-fallthrough=]
+             case 2: ch += *source++; ch <<= 6;
+                                      ~~~^~~~~
+generator.c:152:13: note: here
+             case 1: ch += *source++; ch <<= 6;
+             ^~~~
+generator.c:152:41: warning: this statement may fall through [-Wimplicit-fallthrough=]
+             case 1: ch += *source++; ch <<= 6;
+                                      ~~~^~~~~
+generator.c:153:13: note: here
+             case 0: ch += *source++;
+             ^~~~
+generator.c: In function ‘isLegalUTF8’:
+generator.c:86:46: warning: this statement may fall through [-Wimplicit-fallthrough=]
+         case 4: if ((a = (*--srcptr)) < 0x80 || a > 0xBF) return 0;
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+generator.c:87:9: note: here
+         case 3: if ((a = (*--srcptr)) < 0x80 || a > 0xBF) return 0;
+         ^~~~
+generator.c:87:46: warning: this statement may fall through [-Wimplicit-fallthrough=]
+         case 3: if ((a = (*--srcptr)) < 0x80 || a > 0xBF) return 0;
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+generator.c:88:9: note: here
+         case 2: if ((a = (*--srcptr)) > 0xBF) return 0;
+         ^~~~
+generator.c:96:39: warning: this statement may fall through [-Wimplicit-fallthrough=]
+                         default:   if (a < 0x80) return 0;
+                                       ^
+generator.c:99:9: note: here
+         case 1: if (*source >= 0x80 && *source < 0xC2) return 0;
+         ^~~~
+installing default callback libraries
+installing default generator libraries
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/json/parser'
+compiling parser.c
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/mathn/complex'
+compiling complex.c
+installing default complex libraries
+linking shared-object mathn/complex.so
+parser.c: In function ‘cParser_parse_quirks_mode’:
+parser.c:1941:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1943:1: note: here
+ case 1:
+ ^~~~
+parser.rl:776:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+             begin_value >parse_value
+     ^
+parser.rl:778:1: note: here
+ }%%
+ ^~~ 
+parser.c:1988:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1990:1: note: here
+ case 2:
+ ^~~~
+parser.c:1997:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1999:1: note: here
+ case 3:
+ ^~~~
+parser.c:2004:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:2006:1: note: here
+ case 4:
+ ^~~~
+parser.c:2013:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:2015:1: note: here
+ case 5:
+ ^~~~
+parser.c:2020:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:2022:1: note: here
+ case 6:
+ ^~~~
+parser.c:2029:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:2031:1: note: here
+ case 7:
+ ^~~~
+parser.c:2036:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:2038:1: note: here
+ case 8:
+ ^~~~
+parser.c:2045:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:2047:1: note: here
+ case 9:
+ ^~~~
+parser.c: In function ‘JSON_parse_value’:
+parser.rl:207:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+             *result = CNaN;
+     ^
+parser.rl:209:1: note: here
+             rb_raise(eParserError, "%u: unexpected token at '%s'", __LINE__, p - 2);
+ ^   
+parser.c:610:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:612:1: note: here
+ case 2:
+ ^~~~
+parser.c:617:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:619:1: note: here
+ case 3:
+ ^~~~
+parser.c:624:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:626:1: note: here
+ case 4:
+ ^~~~
+parser.c:631:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:633:1: note: here
+ case 5:
+ ^~~~
+parser.c:638:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:640:1: note: here
+ case 6:
+ ^~~~
+parser.c:645:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:647:1: note: here
+ case 7:
+ ^~~~
+parser.c:652:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:654:1: note: here
+ case 8:
+ ^~~~
+parser.c:659:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:661:1: note: here
+ case 9:
+ ^~~~
+parser.c:666:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:668:1: note: here
+ case 10:
+ ^~~~
+parser.c:673:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:675:1: note: here
+ case 11:
+ ^~~~
+parser.c:680:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:682:1: note: here
+ case 12:
+ ^~~~
+parser.c:687:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:689:1: note: here
+ case 13:
+ ^~~~
+parser.c:694:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:696:1: note: here
+ case 14:
+ ^~~~
+parser.c:701:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:703:1: note: here
+ case 15:
+ ^~~~
+parser.c:708:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:710:1: note: here
+ case 16:
+ ^~~~
+parser.c:715:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:717:1: note: here
+ case 17:
+ ^~~~
+parser.c:722:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:724:1: note: here
+ case 18:
+ ^~~~
+parser.c:729:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:731:1: note: here
+ case 19:
+ ^~~~
+parser.c:736:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:738:1: note: here
+ case 20:
+ ^~~~
+parser.c: In function ‘JSON_parse_string’:
+parser.c:1427:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1429:1: note: here
+ case 2:
+ ^~~~
+parser.c:1459:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1461:1: note: here
+ case 3:
+ ^~~~
+parser.c:1468:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1470:1: note: here
+ case 4:
+ ^~~~
+parser.c:1481:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1483:1: note: here
+ case 5:
+ ^~~~
+parser.c:1494:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1496:1: note: here
+ case 6:
+ ^~~~
+parser.c:1507:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1509:1: note: here
+ case 7:
+ ^~~~
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/mathn/complex'
+parser.c: In function ‘JSON_parse_float’:
+parser.c:919:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:921:1: note: here
+ case 2:
+ ^~~~
+parser.c:928:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:930:1: note: here
+ case 3:
+ ^~~~
+parser.c:938:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:940:1: note: here
+ case 4:
+ ^~~~
+parser.c:945:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:947:1: note: here
+ case 8:
+ ^~~~
+parser.c:969:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:971:1: note: here
+ case 5:
+ ^~~~
+parser.c:980:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:982:1: note: here
+ case 6:
+ ^~~~
+parser.c:987:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:989:1: note: here
+ case 10:
+ ^~~~
+parser.c:1001:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1003:1: note: here
+ case 7:
+ ^~~~
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/mathn/rational'
+parser.c: In function ‘JSON_parse_integer’:
+parser.c:820:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:822:1: note: here
+ case 2:
+ ^~~~
+parser.c:829:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:831:1: note: here
+ case 3:
+ ^~~~
+parser.c:846:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:848:1: note: here
+ case 5:
+ ^~~~
+parser.c: In function ‘JSON_parse_array’:
+parser.c:1086:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1088:1: note: here
+ case 2:
+ ^~~~
+parser.rl:374:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 
+     ^
+parser.rl:376:1: note: here
+ 
+ ^   
+parser.c:1143:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1145:1: note: here
+ case 4:
+ ^~~~
+parser.c:1167:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1169:1: note: here
+ case 5:
+ ^~~~
+parser.c:1176:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1178:1: note: here
+ case 6:
+ ^~~~
+parser.c:1183:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1185:1: note: here
+ case 7:
+ ^~~~
+parser.c:1192:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1194:1: note: here
+ case 8:
+ ^~~~
+parser.c:1199:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1201:1: note: here
+ case 9:
+ ^~~~
+parser.c:1208:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1210:1: note: here
+ case 10:
+ ^~~~
+parser.c:1215:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1217:1: note: here
+ case 11:
+ ^~~~
+parser.c:1224:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1226:1: note: here
+ case 12:
+ ^~~~
+parser.c:1241:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1243:1: note: here
+ case 13:
+ ^~~~
+parser.c:1250:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1252:1: note: here
+ case 14:
+ ^~~~
+parser.c:1257:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1259:1: note: here
+ case 15:
+ ^~~~
+parser.c:1266:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1268:1: note: here
+ case 16:
+ ^~~~
+parser.c: In function ‘JSON_parse_object’:
+parser.c:136:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:138:1: note: here
+ case 2:
+ ^~~~
+parser.rl:142:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+ 
+     ^
+parser.rl:144:1: note: here
+     next_pair   = ignore* value_separator pair;
+ ^   
+parser.c:174:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:176:1: note: here
+ case 4:
+ ^~~~
+parser.c:183:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:185:1: note: here
+ case 5:
+ ^~~~
+parser.c:190:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:192:1: note: here
+ case 6:
+ ^~~~
+parser.c:199:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:201:1: note: here
+ case 7:
+ ^~~~
+parser.c:206:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:208:1: note: here
+ case 8:
+ ^~~~
+parser.rl:134:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+         char *np;
+     ^
+parser.rl:136:1: note: here
+         np = JSON_parse_string(json, fpc, pe, &last_name);
+ ^   
+parser.c:262:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:264:1: note: here
+ case 10:
+ ^~~~
+parser.c:275:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:277:1: note: here
+ case 11:
+ ^~~~
+parser.c:284:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:286:1: note: here
+ case 12:
+ ^~~~
+parser.c:291:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:293:1: note: here
+ case 13:
+ ^~~~
+parser.c:300:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:302:1: note: here
+ case 14:
+ ^~~~
+parser.c:307:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:309:1: note: here
+ case 15:
+ ^~~~
+parser.c:316:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:318:1: note: here
+ case 16:
+ ^~~~
+parser.c:323:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:325:1: note: here
+ case 17:
+ ^~~~
+parser.c:332:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:334:1: note: here
+ case 18:
+ ^~~~
+parser.c:349:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:351:1: note: here
+ case 19:
+ ^~~~
+parser.c:358:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:360:1: note: here
+ case 20:
+ ^~~~
+parser.c:365:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:367:1: note: here
+ case 21:
+ ^~~~
+parser.c:374:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:376:1: note: here
+ case 22:
+ ^~~~
+parser.c:381:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:383:1: note: here
+ case 23:
+ ^~~~
+parser.c:390:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:392:1: note: here
+ case 24:
+ ^~~~
+parser.c:397:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:399:1: note: here
+ case 25:
+ ^~~~
+parser.c:406:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:408:1: note: here
+ case 26:
+ ^~~~
+parser.c: In function ‘cParser_parse_strict’:
+parser.c:1767:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1769:1: note: here
+ case 1:
+ ^~~~
+parser.c:1784:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1786:1: note: here
+ case 2:
+ ^~~~
+parser.c:1793:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1795:1: note: here
+ case 3:
+ ^~~~
+parser.c:1800:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1802:1: note: here
+ case 4:
+ ^~~~
+parser.c:1809:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1811:1: note: here
+ case 5:
+ ^~~~
+parser.rl:730:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+         char *np;
+     ^
+parser.rl:732:1: note: here
+         np = JSON_parse_array(json, fpc, pe, &result);
+ ^   
+parser.c:1847:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1849:1: note: here
+ case 6:
+ ^~~~
+parser.c:1856:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1858:1: note: here
+ case 7:
+ ^~~~
+parser.c:1863:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1865:1: note: here
+ case 8:
+ ^~~~
+parser.c:1872:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if ( ++p == pe )
+     ^
+parser.c:1874:1: note: here
+ case 9:
+ ^~~~
+compiling rational.c
+installing default rational libraries
+linking shared-object mathn/rational.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/mathn/rational'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/nkf'
+compiling nkf.c
+linking shared-object json/ext/generator.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/json/generator'
+installing default nkf libraries
+installing default parser libraries
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/objspace'
+compiling objspace.c
+In file included from nkf.c:62:0:
+nkf-utf8/nkf.c: In function ‘module_connection’:
+nkf-utf8/nkf.c:5709:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+     if (nkf_enc_unicode_p(output_encoding))
+     ^~
+nkf-utf8/nkf.c:5712:2: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  if (x0201_f == NKF_UNSPECIFIED) {
+  ^~
+nkf-utf8/nkf.c: In function ‘options’:
+nkf-utf8/nkf.c:6806:22: warning: this statement may fall through [-Wimplicit-fallthrough=]
+      fold_preserve_f = TRUE;
+nkf-utf8/nkf.c:6807:2: note: here
+  case 'f':   /* folding -f60 or -f */
+  ^~~~
+In file included from nkf.c:62:0:
+nkf-utf8/nkf.c: In function ‘set_input_encoding’:
+nkf-utf8/nkf.c:1238:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  if (x0201_f == NKF_UNSPECIFIED) x0201_f = FALSE; /* -x specified implicitly */
+     ^
+nkf-utf8/nkf.c:1239:5: note: here
+     case CP50220:
+     ^~~~
+objspace.c: In function ‘total_i’:
+objspace.c:62:6: warning: this statement may fall through [-Wimplicit-fallthrough=]
+   if (FL_TEST(v, FL_SINGLETON))
+      ^
+objspace.c:64:8: note: here
+        default:
+        ^~~~~~~
+linking shared-object json/ext/parser.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/json/parser'
+make[2]: Entering directory '/home/mds/.rvm/src/ruby-2.1.10/ext/openssl'
+compiling ossl_pkcs5.c
+In file included from ossl.h:58:0,
+                 from ossl_pkcs5.c:5:
+/usr/include/openssl/asn1_mac.h:10:2: error: #error "This file is obsolete; please update your software."
+ #error "This file is obsolete; please update your software."
+  ^~~~~
+In file included from ossl.h:219:0,
+                 from ossl_pkcs5.c:5:
+openssl_missing.h:79:35: error: macro "EVP_MD_CTX_create" passed 1 arguments, but takes just 0
+ EVP_MD_CTX *EVP_MD_CTX_create(void);
+                                   ^
+In file included from /usr/include/openssl/x509.h:23:0,
+                 from /usr/include/openssl/x509v3.h:14,
+                 from ossl.h:59,
+                 from ossl_pkcs5.c:5:
+openssl_missing.h:83:6: error: expected declaration specifiers or ‘...’ before ‘(’ token
+ void EVP_MD_CTX_init(EVP_MD_CTX *ctx);
+      ^
+openssl_missing.h:91:6: error: expected declaration specifiers or ‘...’ before ‘(’ token
+ void EVP_MD_CTX_destroy(EVP_MD_CTX *ctx);
+      ^
+In file included from ossl.h:233:0,
+                 from ossl_pkcs5.c:5:
+ossl_pkey.h:43:5: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+ #if HAVE_BN_GENCB
+     ^~~~~~~~~~~~~
+ossl_pkey.h:43:5: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+ossl_pkey.h:43:5: warning: this use of "defined" may not be portable [-Wexpansion-to-defined]
+Makefile:280: recipe for target 'ossl_pkcs5.o' failed
+make[2]: *** [ossl_pkcs5.o] Error 1
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/openssl'
+exts.mk:192: recipe for target 'ext/openssl/all' failed
+make[1]: *** [ext/openssl/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+compiling object_tracing.c
+compiling objspace_dump.c
+linking shared-object dl/callback.so
+installing default objspace libraries
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/dl/callback'
+linking shared-object objspace.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/objspace'
+linking shared-object nkf.so
+make[2]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10/ext/nkf'
+make[1]: Leaving directory '/home/mds/.rvm/src/ruby-2.1.10'
+uncommon.mk:180: recipe for target 'build-ext' failed
+make: *** [build-ext] Error 2
+++ return 2
